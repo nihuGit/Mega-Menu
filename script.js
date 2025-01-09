@@ -100,3 +100,19 @@ function resetMenu() {
         });
     }
 }
+
+
+// Search functionality for overlay
+const searchIcon = document.getElementById('search-icon');
+      const searchOverlay = document.getElementById('search-overlay');
+      const closeSearch = document.getElementById('close-search');
+
+      // Open the search overlay
+      searchIcon.addEventListener('click', () => {
+        searchOverlay.classList.add('active');
+      });
+
+      // Close the search overlay
+      closeSearch.addEventListener('click', () => {
+        searchOverlay.classList.remove('active');
+      });

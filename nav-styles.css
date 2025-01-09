@@ -8,6 +8,7 @@
 }
 body{
     line-height: 1.4;
+    overflow-x: hidden;
 }
 .main-wrapper img{
     width: 100%;
@@ -87,12 +88,9 @@ body{
     left: 0; /* Slide into view */
 }
 .close-btn {
-    position: absolute;
-    top: 5px;
-    right: 15px;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #000;
     cursor: pointer;
     z-index: 1000; 
@@ -308,4 +306,41 @@ body{
     .header p{
         width: 40%;
     }
+    .search-bar-overlay {
+        position: absolute;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 85%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: right 0.5s ease, opacity 0.5s ease-in-out; /* Added smooth animation for right and opacity */
+        visibility: hidden; /* Element is hidden */
+        opacity: 0; /* Fully transparent */
+        overflow-x: hidden;
+      }
+
+      .search-bar-overlay.active {
+        right: 0; /* Slide in from the right */
+        visibility: visible; /* Make the element visible */
+        opacity: 1; /* Fully opaque */
+      }
+
+      .search-bar-overlay input {
+        width: 60%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .search-bar-overlay .close-search {
+        margin-left: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #333;
+      }
 }

@@ -24,7 +24,7 @@
           <button type = "button" class = "navbar-toggler">
             <i class = "fas fa-bars"></i>
           </button>
-          <a href = "index.html" class = "navbar-brand text-lg lg:text-2xl font-bold flex w-fit">
+          <a href = "index.html" class = "navbar-brand font-bold flex w-fit">
             <span class="text-black w-fit flex">Search</span>
             <span class="text-green-500">Journal</span>
           </a>
@@ -36,10 +36,15 @@
         </div>
 
         <div class = "navbar-collapse">
-          
-          <button type="button" class="close-btn lg:hidden">
-            <i class="fas fa-times "></i>
-        </button>
+          <div class = "brand-and-icon flex justify-between items-center w-full lg:hidden">
+            <a href = "index.html" class = "navbar-brand font-bold flex w-fit">
+              <span class="text-black w-fit flex">Search</span>
+              <span class="text-green-500">Journal</span>
+            </a>
+            <button type="button" class="close-btn lg:hidden">
+              <i class="fas fa-times "></i>
+          </button>
+          </div>
 
           <form method="GET" action="" class="space-y-4 my-6 lg:hidden">
             <div class="bg-white border-2  shadow-lg px-4 py-4 relative rounded-xl flex">
@@ -287,11 +292,23 @@
           <a href="#" class="">
             <i class="fa-solid fa-envelope text-xl"></i>
           </a>
-          <a href="#" class="">
-            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+          <a class="">
+            <i class="fa-solid fa-magnifying-glass text-xl cursor-pointer" id="search-icon"></i>
             </svg>
           </a>
         </div>
+        <!-- Search Overlay -->
+        <form method="GET" action="">
+      <div class="search-bar-overlay hidden lg:flex" id="search-overlay">
+        <span class="w-auto flex justify-end  items-center text-gray-500 p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </span>
+        <input type="text" placeholder="What are you looking for?">
+        <i class="fas fa-times close-search" id="close-search"></i>
+      </div>
+    </form>
       </nav>
     </div>
 
