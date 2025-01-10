@@ -376,8 +376,17 @@ body{
     }
     .navbar-nav > li > a{
         padding: 1.7rem 0.5rem 1.7rem 0.5rem;
-        /* padding: 1.7rem 0.2rem 1.7rem 0.2rem; */
+        /* padding: 1.7rem 1rem 1.7rem 1rem; */
         font-size: 1rem;
         font-weight: 400;
+    }
+}
+@media screen and (min-width: 1280px){
+    .navbar-brand{
+        padding-right: 2rem;
+    }
+    .navbar-nav > li > a{
+        padding: 1.7rem 1rem 1.7rem 1rem;
+        
     }
 }
