@@ -1,51 +1,7 @@
-// $(document).ready(function(){
-//     $('.navbar-toggler').click(function(){
-//         $('.navbar-collapse').slideToggle(300);
-//     });
-    
-//     smallScreenMenu();
-//     let temp;
-//     function resizeEnd(){
-//         smallScreenMenu();
-//     }
-
-//     $(window).resize(function(){
-//         clearTimeout(temp);
-//         temp = setTimeout(resizeEnd, 100);
-//         resetMenu();
-//     });
-// });
-
-
-
-// const subMenus = $('.sub-menu');
-// const menuLinks = $('.menu-link');
-
-// function smallScreenMenu(){
-//     if($(window).innerWidth() <= 1024){
-//         menuLinks.each(function(item){
-//             $(this).click(function(){
-//                 $(this).next().slideToggle();
-//             });
-//         });
-//     } else {
-//         menuLinks.each(function(item){
-//             $(this).off('click');
-//         });
-//     }
-// }
-
-// function resetMenu(){
-//     if($(window).innerWidth() > 1024){
-//         subMenus.each(function(item){
-//             $(this).css('display', 'none');
-//         });
-//     }
-// }
-
-
 $(document).ready(function () {
-    // Navbar toggler click event for sliding from the left
+    let temp;
+
+    // Navbar toggler for sliding from the left
     $('.navbar-toggler').click(function () {
         $('.navbar-collapse').addClass('open'); // Add 'open' class to slide in
     });
@@ -55,106 +11,69 @@ $(document).ready(function () {
         $('.navbar-collapse').removeClass('open'); // Remove 'open' class to slide out
     });
 
-    // Responsive behavior: Reset navbar on large screens
+    // Submenu logic for smaller screens
+    smallScreenMenu();
+
+    // Responsive behavior: Reset navbar and menus on resize
     $(window).resize(function () {
-        clearTimeout(temp); // Clear debounce timer for submenu behavior
+        clearTimeout(temp); // Clear debounce timer
         temp = setTimeout(resizeEnd, 100);
-        resetMenu();
 
         if ($(window).width() > 1024) {
-            $('.navbar-collapse').removeClass('open'); // Hide sliding navbar
+            $('.navbar-collapse').removeClass('open'); // Reset navbar
         }
     });
 
-    // Submenu logic for smaller screens
-
-
-    // smallScreenMenu();
-    // let temp;
-    // function resizeEnd() {
-    //     smallScreenMenu();
-    // }
-
-
-    smallScreenMenu();
-    let temp;
-    function resizeEnd(){
+    function resizeEnd() {
         smallScreenMenu();
-    }
-
-    $(window).resize(function(){
-        clearTimeout(temp);
-        temp = setTimeout(resizeEnd, 100);
         resetMenu();
-    });
-
+    }
 });
 
 const subMenus = $('.sub-menu');
 const menuLinks = $('.menu-link');
 
-function smallScreenMenu(){
-    if($(window).innerWidth() <= 1024){
-        menuLinks.each(function(item){
-            $(this).click(function(){
-                $(this).next().slideToggle();
+function smallScreenMenu() {
+    if ($(window).innerWidth() <= 1024) {
+        // Unbind previous event handlers to prevent duplicates
+        menuLinks.off('click');
+
+        // Attach click handler for toggling submenu
+        menuLinks.each(function () {
+            $(this).on('click', function (e) {
+                e.preventDefault(); // Prevent default navigation
+                e.stopPropagation(); // Stop event bubbling
+                const subMenu = $(this).next('.sub-menu');
+                
+                // Slide toggle submenu and close others
+                $('.sub-menu').not(subMenu).slideUp(); // Close other open submenus
+                subMenu.stop(true, true).slideToggle(); // Toggle clicked submenu
             });
         });
     } else {
-        menuLinks.each(function(item){
-            $(this).off('click');
-        });
+        // Remove click handlers for larger screens
+        menuLinks.off('click');
     }
 }
 
-function resetMenu(){
-    if($(window).innerWidth() > 1024){
-        subMenus.each(function(item){
-            $(this).css('display', 'none');
-        });
+function resetMenu() {
+    if ($(window).innerWidth() > 1024) {
+        // Ensure all submenus are hidden
+        subMenus.css('display', 'none');
     }
 }
-
-
-// Submenu toggle logic
-// const subMenus = $('.sub-menu');
-// const menuLinks = $('.menu-link');
-
-// function smallScreenMenu() {
-//     if ($(window).innerWidth() <= 1024) {
-//         menuLinks.each(function (item) {
-//             $(this).click(function () {
-//                 $(this).next().slideToggle();
-//             });
-//         });
-//     } else {
-//         menuLinks.each(function (item) {
-//             $(this).off('click');
-//         });
-//     }
-// }
-
-// Reset submenu visibility on larger screens
-// function resetMenu() {
-//     if ($(window).innerWidth() > 1024) {
-//         subMenus.each(function (item) {
-//             $(this).css('display', 'none');
-//         });
-//     }
-// }
-
 
 // Search functionality for overlay
 const searchIcon = document.getElementById('search-icon');
-      const searchOverlay = document.getElementById('search-overlay');
-      const closeSearch = document.getElementById('close-search');
+const searchOverlay = document.getElementById('search-overlay');
+const closeSearch = document.getElementById('close-search');
 
-      // Open the search overlay
-      searchIcon.addEventListener('click', () => {
-        searchOverlay.classList.add('active');
-      });
+// Open the search overlay
+searchIcon.addEventListener('click', () => {
+    searchOverlay.classList.add('active');
+});
 
-      // Close the search overlay
-      closeSearch.addEventListener('click', () => {
-        searchOverlay.classList.remove('active');
-      });
+// Close the search overlay
+closeSearch.addEventListener('click', () => {
+    searchOverlay.classList.remove('active');
+});
