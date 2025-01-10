@@ -32,15 +32,16 @@ body{
     display: flex;
     flex-direction: column;
     z-index: 10;
+    border-bottom: 1px solid #ddd;
 }
 .brand-and-icon{
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
 }
 .navbar-brand{
-    font-size: 1.8rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     letter-spacing: 1px;
     font-weight: 700;
 }
@@ -62,7 +63,7 @@ body{
     border: none;
     background-color: #23bc0b;
     color: #ffff;
-    font-size: 0.8rem;
+    font-size: 1rem;
     cursor: pointer;
     padding: 0.4rem 0.5rem;
     transition: all 0.4s ease;
@@ -78,14 +79,17 @@ body{
     height: 100%;
     width: 90%; /* Adjust width as needed */
     background-color: #ffff;
-    transition: left 0.3s ease; /* Smooth slide effect */
+    transition: left 0.5s ease; 
     z-index: 999; /* Ensure it's on top */
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     overflow-y: auto;
-    border: 1px solid #d3d0d0;
+    border-bottom: 1px solid #ddd;
 }
 .navbar-collapse.open {
-    left: 0; /* Slide into view */
+    left: 0;
+    box-shadow: 5px 5px 15px 5rem rgba(0, 0, 0, 0.5);
+    transition: left 0.5s ease, box-shadow 0.6s ease-in 0.2s;
 }
 .close-btn {
     background: none;
@@ -128,7 +132,7 @@ body{
     text-transform: capitalize;
     padding: 0.2rem 0;
     margin: 0.2rem 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 .sub-menu ul li a{
     opacity: 0.8;
@@ -140,14 +144,16 @@ body{
 }
 .sub-menu{
     display: none;
+    /* background: #f8f8f8; */
 }
 
 .sub-menu-item{
-    padding-left: 1.2rem;
+    padding-left: 0rem;
 }
 .sub-menu-item:nth-child(3){
+
+    display: none;
     background: #ddd;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -173,6 +179,7 @@ body{
     color: #000;
 }
 .sub-menu-item:nth-child(4){
+    display: none;
     width: 50%;
     margin: 0 auto;
     padding: 2rem 0;
@@ -223,7 +230,7 @@ body{
 @media screen and (min-width: 1024px){
     .navbar{
         flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         align-items: center;
         border-bottom: 1px solid #ddd;
         padding: 0 1rem;
@@ -261,8 +268,11 @@ body{
         margin: 0 0.4rem;
         /* padding: 1.7rem 1.8rem 1.7rem 0.4rem; */
         padding: 1.7rem 0.2rem 1.7rem 0.2rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 400;
+    }
+    .navbar-nav :nth-child(7){
+        display: none;
     }
     .drop-icon{
         display: none;
@@ -285,6 +295,7 @@ body{
         transition: border-bottom 0.4s ease-in-out;
         
     }
+    
     .navbar-nav > li:hover{
         border-bottom-color: #23bc0b;
     }
@@ -293,9 +304,14 @@ body{
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
+    
     .sub-menu-item:nth-child(3){
+        display: flex;
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+    .sub-menu-item:nth-child(4){
+        display: block;
     }
 
     /* header */
@@ -312,7 +328,7 @@ body{
         position: absolute;
         top: 0;
         right: 0; 
-        width: 85%;
+        width: 80%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.95);
         display: flex;
@@ -344,4 +360,24 @@ body{
         cursor: pointer;
         color: #333;
       }
+}
+
+@media screen and (min-width: 1100px){
+    .navbar-nav :nth-child(7){
+        display: block;
+    }
+}
+@media screen and (min-width: 1280px){
+    .navbar-brand{
+        font-size: 1.5rem; 
+        /* font-size: 1.8755rem;  */
+    line-height: 2rem;
+    /* line-height: 2.25rem; */
+    }
+    .navbar-nav > li > a{
+        padding: 1.7rem 0.5rem 1.7rem 0.5rem;
+        /* padding: 1.7rem 0.2rem 1.7rem 0.2rem; */
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
