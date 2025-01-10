@@ -98,7 +98,8 @@ body{
 }
 
 .navbar-nav > li > a{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 1.2rem;
     font-weight: 700;
     display: block;
     padding: 0.6rem 0;

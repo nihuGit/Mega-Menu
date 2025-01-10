@@ -67,39 +67,81 @@ $(document).ready(function () {
     });
 
     // Submenu logic for smaller screens
+
+
+    // smallScreenMenu();
+    // let temp;
+    // function resizeEnd() {
+    //     smallScreenMenu();
+    // }
+
+
     smallScreenMenu();
     let temp;
-    function resizeEnd() {
+    function resizeEnd(){
         smallScreenMenu();
     }
+
+    $(window).resize(function(){
+        clearTimeout(temp);
+        temp = setTimeout(resizeEnd, 100);
+        resetMenu();
+    });
+
 });
 
-// Submenu toggle logic
 const subMenus = $('.sub-menu');
 const menuLinks = $('.menu-link');
 
-function smallScreenMenu() {
-    if ($(window).innerWidth() <= 992) {
-        menuLinks.each(function (item) {
-            $(this).click(function () {
+function smallScreenMenu(){
+    if($(window).innerWidth() <= 992){
+        menuLinks.each(function(item){
+            $(this).click(function(){
                 $(this).next().slideToggle();
             });
         });
     } else {
-        menuLinks.each(function (item) {
+        menuLinks.each(function(item){
             $(this).off('click');
         });
     }
 }
 
-// Reset submenu visibility on larger screens
-function resetMenu() {
-    if ($(window).innerWidth() > 992) {
-        subMenus.each(function (item) {
+function resetMenu(){
+    if($(window).innerWidth() > 992){
+        subMenus.each(function(item){
             $(this).css('display', 'none');
         });
     }
 }
+
+
+// Submenu toggle logic
+// const subMenus = $('.sub-menu');
+// const menuLinks = $('.menu-link');
+
+// function smallScreenMenu() {
+//     if ($(window).innerWidth() <= 992) {
+//         menuLinks.each(function (item) {
+//             $(this).click(function () {
+//                 $(this).next().slideToggle();
+//             });
+//         });
+//     } else {
+//         menuLinks.each(function (item) {
+//             $(this).off('click');
+//         });
+//     }
+// }
+
+// Reset submenu visibility on larger screens
+// function resetMenu() {
+//     if ($(window).innerWidth() > 992) {
+//         subMenus.each(function (item) {
+//             $(this).css('display', 'none');
+//         });
+//     }
+// }
 
 
 // Search functionality for overlay
