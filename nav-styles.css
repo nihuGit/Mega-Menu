@@ -220,7 +220,7 @@ body{
 }
 
 /* Media Queries */
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1024px){
     .navbar{
         flex-direction: row;
         flex-wrap: wrap;
@@ -259,7 +259,8 @@ body{
     .navbar-nav > li > a{
         border-bottom: none;
         margin: 0 0.4rem;
-        padding: 1.7rem 1.8rem 1.7rem 0.4rem;
+        /* padding: 1.7rem 1.8rem 1.7rem 0.4rem; */
+        padding: 1.7rem 0.2rem 1.7rem 0.2rem;
         font-size: 1rem;
         font-weight: 400;
     }
@@ -310,7 +311,7 @@ body{
     .search-bar-overlay {
         position: absolute;
         top: 0;
-        right: -100%; /* Start off-screen */
+        right: 0; 
         width: 85%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.95);
@@ -318,10 +319,9 @@ body{
         justify-content: center;
         align-items: center;
         z-index: 1000;
-        transition: right 0.5s ease, opacity 0.5s ease-in-out; /* Added smooth animation for right and opacity */
-        visibility: hidden; /* Element is hidden */
-        opacity: 0; /* Fully transparent */
-        overflow-x: hidden;
+        transition: right 0.5s ease, opacity 0.3s ease-in-out; 
+        visibility: hidden;
+        opacity: 0; 
       }
 
       .search-bar-overlay.active {

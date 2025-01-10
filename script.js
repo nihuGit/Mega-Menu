@@ -22,7 +22,7 @@
 // const menuLinks = $('.menu-link');
 
 // function smallScreenMenu(){
-//     if($(window).innerWidth() <= 992){
+//     if($(window).innerWidth() <= 1024){
 //         menuLinks.each(function(item){
 //             $(this).click(function(){
 //                 $(this).next().slideToggle();
@@ -36,7 +36,7 @@
 // }
 
 // function resetMenu(){
-//     if($(window).innerWidth() > 992){
+//     if($(window).innerWidth() > 1024){
 //         subMenus.each(function(item){
 //             $(this).css('display', 'none');
 //         });
@@ -61,7 +61,7 @@ $(document).ready(function () {
         temp = setTimeout(resizeEnd, 100);
         resetMenu();
 
-        if ($(window).width() > 992) {
+        if ($(window).width() > 1024) {
             $('.navbar-collapse').removeClass('open'); // Hide sliding navbar
         }
     });
@@ -94,7 +94,7 @@ const subMenus = $('.sub-menu');
 const menuLinks = $('.menu-link');
 
 function smallScreenMenu(){
-    if($(window).innerWidth() <= 992){
+    if($(window).innerWidth() <= 1024){
         menuLinks.each(function(item){
             $(this).click(function(){
                 $(this).next().slideToggle();
@@ -108,7 +108,7 @@ function smallScreenMenu(){
 }
 
 function resetMenu(){
-    if($(window).innerWidth() > 992){
+    if($(window).innerWidth() > 1024){
         subMenus.each(function(item){
             $(this).css('display', 'none');
         });
@@ -121,7 +121,7 @@ function resetMenu(){
 // const menuLinks = $('.menu-link');
 
 // function smallScreenMenu() {
-//     if ($(window).innerWidth() <= 992) {
+//     if ($(window).innerWidth() <= 1024) {
 //         menuLinks.each(function (item) {
 //             $(this).click(function () {
 //                 $(this).next().slideToggle();
@@ -136,7 +136,7 @@ function resetMenu(){
 
 // Reset submenu visibility on larger screens
 // function resetMenu() {
-//     if ($(window).innerWidth() > 992) {
+//     if ($(window).innerWidth() > 1024) {
 //         subMenus.each(function (item) {
 //             $(this).css('display', 'none');
 //         });
