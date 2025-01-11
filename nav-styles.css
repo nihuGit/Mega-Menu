@@ -37,11 +37,12 @@ body{
 .brand-and-icon{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 0.6rem 0;
+    /* border-bottom: 1px solid #ddd; */
 }
 .navbar-brand{
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    /* line-height: 1.75rem; */
     letter-spacing: 1px;
     font-weight: 700;
 }
@@ -65,7 +66,7 @@ body{
     color: #ffff;
     font-size: 1rem;
     cursor: pointer;
-    padding: 0.4rem 0.5rem;
+    padding: 0.4rem 0.8rem;
     transition: all 0.4s ease;
     border-radius: 4px;
 }
@@ -88,8 +89,11 @@ body{
 }
 .navbar-collapse.open {
     left: 0;
-    box-shadow: 5px 5px 15px 5rem rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px 45rem rgba(0, 0, 0, 0.5);
     transition: left 0.5s ease, box-shadow 0.6s ease-in 0.2s;
+}
+.navbar-collapse .brand-and-icon{
+    border-bottom: 1px solid #ddd;
 }
 .close-btn {
     background: none;
@@ -137,10 +141,12 @@ body{
 .sub-menu ul li a{
     opacity: 0.8;
     transition: all 0.5s ease;
+    font-weight: 500;
 }
 .sub-menu ul li a:hover{
     padding-left: 14px;
     opacity: 0.9;
+    text-decoration: underline;
 }
 .sub-menu{
     display: none;
@@ -382,9 +388,7 @@ body{
     }
 }
 @media screen and (min-width: 1280px){
-    .navbar-brand{
-        padding-right: 2rem;
-    }
+    
     .navbar-nav > li > a{
         padding: 1.7rem 1rem 1.7rem 1rem;
         
