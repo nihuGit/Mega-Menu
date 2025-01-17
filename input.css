@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .first-class{
+        @apply bg-neutral-background font-sans text-neutral-text;
+    }
+}
