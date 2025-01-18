@@ -1,9 +1,502 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+@layer base {
+    h1 {
+        @apply text-4xl lg:text-5xl font-bold;
+    }
+    h2 {
+        @apply text-3xl lg:text-4xl font-bold;
+    }
+    h3 {
+        @apply text-2xl lg:text-3xl font-bold;
+    }
+    h4 {
+        @apply text-xl lg:text-2xl font-bold;
+    }
+    h5 {
+        @apply text-base lg:text-lg font-semibold;
+    }
+    .inter-head {
+        @apply font-semibold not-italic;
+        font-family: "Inter", serif;
+        font-optical-sizing: auto;
+      }
+      .inter-para {
+        @apply font-normal not-italic;
+        font-family: "Inter", serif;
+        font-optical-sizing: auto;
+      }
+      .lora-para {
+        @apply font-normal not-italic;
+        font-family: "Lora", serif;
+        font-optical-sizing: auto;
+      }
+}
 
 @layer utilities {
-    .first-class{
-        @apply bg-neutral-background font-sans text-neutral-text;
+    .container__layout {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
     }
+    .container__grid {
+        @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+    }
+    .content__main {
+        @apply md:col-span-2 px-4 lg:px-6;
+      }
+      .header__section {
+        @apply mb-12 mt-3;
+      }
+      .content__section {
+        @apply space-y-6;
+      }
+      .content__header-title {
+        @apply mb-6; 
+      }
+      .content__paragraph {
+        @apply text-neutral-subtext text-lg;
+      }
+      .content__list {
+        @apply list-disc list-inside space-y-2 py-4 mb-6;
+      }
+      .highlights__container{
+        @apply my-4 lg:my-6 px-4 py-6 lg:py-8;
+      } 
+      .highlights__heading {
+        @apply mb-4 lg:mb-6;
+      }
+    
+      .highlights__list {
+        @apply space-y-2;
+      }
+    
+      .highlights__item {
+        @apply flex items-start;
+      }
+    
+      .highlights__bullet {
+        @apply w-2 h-2 mt-2 bg-primary-base rounded-full mr-4;
+      }
+    
+      .highlights__text {
+        @apply text-lg ;
+      }
+      /* Author Card Block */
+      .author-card {
+        @apply p-4 mt-6 lg:mt-8;
+      }
+
+    /* Header Section */
+      .author-card__header {
+        @apply flex flex-wrap justify-between;
+      }
+
+    .author-card__author {
+      @apply flex items-center space-x-4;
+    }
+
+    .author-card__author-image {
+      @apply w-12 md:w-14 h-12 md:h-16 rounded-full;
+    }
+
+    .author-card__author-info {
+      @apply space-y-1 lg:space-y-0;
+    }
+
+    .author-card__author-role {
+      @apply text-primary-base font-semibold text-xs;
+    }
+
+    .author-card__author-name {
+      @apply text-base md:text-xl lg:text-2xl font-bold;
+    }
+
+    .author-card__meta {
+      @apply flex flex-col lg:flex-row font-semibold;
+    }
+
+    
+    .author-card__read-time {
+      @apply text-xs md:text-base  text-neutral-subtext;
+    }
+
+    /* Stats Section */
+    .author-card__stats {
+      @apply flex justify-end space-x-8 mt-4 text-right;
+    }
+
+  
+    .author-card__stats-item {
+      @apply text-primary-base text-xl lg:text-2xl font-bold;
+    }
+
+    /* .author-card__share-count,
+    .author-card__read-count {
+      @apply text-primary-base text-xl lg:text-2xl font-bold;
+    } */
+
+    .author-card__dark-stats-item {
+      @apply text-primary-dark font-semibold text-sm;
+    }
+
+    /* Image Section */
+    .author-card__image-container {
+      @apply mt-6;
+    }
+
+    .author-card__main-image {
+      @apply w-full lg:rounded-lg;
+    }
+
+        /* Webinar Card Block */
+    .webinar-card {
+      @apply mt-10 sm:mx-auto;
+    }
+
+    .webinar-card__container {
+      @apply rounded-xl bg-gradient-to-r from-purple-800 to-purple-500 px-8 py-12 text-white lg:px-10 lg:py-16;
+    }
+
+    /* Content Section */
+    .webinar-card__content {
+      @apply flex flex-col-reverse lg:flex-row-reverse items-center justify-between;
+    }
+
+    .webinar-card__text {
+      @apply sm:order-2 sm:ml-8 lg:ml-0 space-y-4 lg:w-2/3;
+    }
+
+    .webinar-card__title {
+      @apply text-center lg:text-start;
+    }
+
+    .webinar-card__description {
+      @apply mt-4;
+    }
+
+    /* Branding Section */
+    .webinar-card__branding {
+      @apply py-6 flex flex-row lg:w-1/3 justify-center items-center;
+    }
+
+    .webinar-card__brand {
+      @apply lg:pt-6;
+    }
+
+    /* Call-to-Action Button */
+    .webinar-card__cta {
+      @apply mt-6;
+    }
+
+    .webinar-card__button {
+      @apply bg-cyan-400 hover:bg-cyan-500 text-purple-900 font-semibold py-3 px-8 rounded-lg inline-flex items-center;
+    }
+
+    /* paragraphs */
+    .content-container {
+      @apply mt-4 lg:mt-8 text-lg mx-auto p-4;
+    }
+
+    /* Section Styling */
+    .content-section {
+      @apply mb-10;
+    }
+
+    /* Headings */
+    .content-heading {
+      @apply mb-8 ;
+    }
+
+    /* Paragraphs */
+    .content-paragraph {
+      @apply text-neutral-text mb-8;
+    }
+
+    /* Links */
+    .content-link {
+      @apply text-blue-600 underline hover:text-blue-800 hover:underline cursor-pointer;
+    }
+
+    /* List */
+    .content-list {
+      @apply list-disc pl-6 space-y-6 text-neutral-text;
+    }
+
+    .content-list-item {
+      @apply lora-para;
+    }
+
+    /* Divider */
+    .content-divider {
+      @apply my-8 border-gray-300;
+    }
+
+    /* Caption */
+    .content-caption {
+      @apply text-sm md:text-base lg:text-lg text-gray-500 lora-para;
+    }
+
+    /* Buttons */
+    .content-buttons {
+      @apply mt-8 flex gap-6;
+    }
+
+    .content-button {
+      @apply bg-gray-200 text-neutral-text text-sm md:text-base lg:text-lg px-3 md:px-4 py-1 rounded-full hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-400;
+    }
+
+/* Profile Card Container */
+.profile-card {
+  @apply bg-[#F5F7F7] px-6 py-8 lg:px-8 lg:py-12 rounded-3xl;
+}
+
+.profile-card__container {
+  @apply flex flex-col sm:flex-row items-center sm:items-start;
+}
+
+/* Avatar Section */
+.profile-card__avatar-section {
+  @apply flex flex-col ;
+}
+
+.profile-card__avatar-wrapper {
+  @apply relative;
+}
+
+.profile-card__avatar-image {
+  @apply w-24 h-24 rounded-full border-2 border-primary-base;
+}
+
+.profile-card__status-badge {
+  @apply absolute bottom-0 right-0 w-6 h-6 text-primary-base rounded-full flex items-center justify-center border-2 border-primary-base;
+}
+
+.profile-card__status-icon {
+  @apply h-4 w-4 text-primary-base;
+}
+
+.profile-card__button {
+  @apply mt-4 px-2 py-1 text-sm font-medium text-black border-2 border-black bg-gray-100 rounded-3xl shadow-sm hover:bg-gray-200 focus:outline-none focus:ring focus:ring-gray-300;
+}
+
+/* Content Section */
+.profile-card__content {
+  @apply sm:ml-6 mt-4 sm:mt-0 text-center sm:text-left lg:w-5/6;
+}
+
+.profile-card__role {
+  @apply text-sm md:text-base text-primary-base font-bold;
+}
+
+.profile-card__name {
+  @apply text-xl lg:text-2xl font-bold text-primary-dark mt-1;
+}
+
+.profile-card__title {
+  @apply text-sm lg:text-base;
+}
+
+.profile-card__link {
+  @apply text-primary-base hover:underline;
+}
+
+.profile-card__bio {
+  @apply text-primary-dark font-thin mt-5 text-sm;
+}
+
+/* Newsletter Container */
+.newsletter {
+  @apply bg-[#F5F7F7] p-12 rounded-3xl mx-auto mt-6;
+}
+
+.newsletter__header {
+  @apply text-center lg:text-start;
+}
+
+.newsletter__title {
+  @apply text-primary-dark;
+}
+
+.newsletter__subtitle {
+  @apply text-primary-base mt-4;
+}
+
+.newsletter__description {
+  @apply text-primary-dark mt-2;
+}
+
+/* Form Section */
+.newsletter__form {
+  @apply mt-6;
+}
+
+.newsletter__fields {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+}
+
+.newsletter__field {
+  @apply;
+}
+
+.newsletter__label {
+  @apply block text-sm font-medium text-neutral-text;
+}
+
+.newsletter__input {
+  @apply mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-base focus:border-primary-base;
+}
+
+/* Checkbox Section */
+.newsletter__checkbox-section {
+  @apply mt-8 lg:flex items-center lg:space-x-10;
+}
+
+.newsletter__checkbox-group {
+  @apply flex flex-wrap gap-4 mt-2;
+}
+
+.newsletter__checkbox-item {
+  @apply;
+}
+
+.newsletter__checkbox {
+  @apply rounded border-gray-300 text-primary-base focus:ring-primary-base;
+}
+
+.newsletter__checkbox-label {
+  @apply ml-2 text-sm text-neutral-text;
+}
+
+/* Footer Section */
+.newsletter__footer {
+  @apply lg:flex items-center mt-3 lg:mt-6;
+}
+
+.newsletter__policy {
+  @apply lg:w-2/3;
+}
+
+.newsletter__policy-text {
+  @apply mt-4 text-sm text-gray-500;
+}
+
+.newsletter__policy-link {
+  @apply text-primary-base hover:underline;
+}
+
+.newsletter__button-wrapper {
+  @apply mt-6 text-center lg:w-1/3;
+}
+
+.newsletter__button {
+  @apply px-6 py-2 bg-green-500 text-white text-sm font-medium rounded-md hover:bg-green-700 focus:ring-4 focus:ring-primary-base w-full;
+}
+
+/* Suggested Articles Section */
+.suggested-articles {
+  @apply mx-auto pt-4 mt-6;
+}
+
+.suggested-articles__title {
+  @apply mb-6;
+}
+
+.suggested-articles__grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.suggested-articles__item {
+  @apply overflow-hidden;
+}
+
+.suggested-articles__image {
+  @apply w-full h-32 object-cover;
+}
+
+.suggested-articles__content {
+  @apply py-4;
+}
+
+.suggested-articles__headline {
+  @apply mb-2;
+}
+/* Subscription Section */
+.subscription-section {
+  @apply w-full;
+}
+
+.subscription-section__container {
+  @apply justify-center flex flex-col;
+}
+
+.subscription-section__card {
+  @apply bg-[#F5F7F7] rounded-lg p-6 max-w-md w-full text-center;
+}
+
+.subscription-section__title {
+  @apply mb-2;
+}
+
+.subscription-section__title-dark {
+  @apply text-primary-dark;
+}
+
+.subscription-section__title-highlight {
+  @apply text-primary-base -mx-2;
+}
+
+.subscription-section__subtitle {
+  @apply text-2xl md:text-3xl font-semibold text-primary-base;
+}
+
+.subscription-section__description {
+  @apply text-primary-dark font-bold mb-6 text-2xl md:text-3xl;
+}
+
+.subscription-section__form {
+  @apply space-y-10 mx-5;
+}
+
+.subscription-section__input {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base;
+}
+
+.subscription-section__button {
+  @apply w-2/3 bg-green-500 text-white font-bold py-2 hover:bg-green-600 focus:ring-2 focus:ring-primary-base;
+}
+
+.subscription-section__disclaimer {
+  @apply text-xs md:text-sm text-gray-600 mt-4 leading-loose;
+}
+
+.subscription-section__link {
+  @apply text-primary-base underline;
+}
+
+/* Marketing Trends Section */
+.marketing-trends {
+  @apply mt-4 lg:mt-8 flex flex-col;
+}
+
+.marketing-trends__image-container {
+  @apply w-full;
+}
+
+.marketing-trends__image {
+  @apply w-full;
+}
+
+.marketing-trends__content {
+  @apply py-4 bg-green-500 px-4;
+}
+
+.marketing-trends__headline {
+  @apply text-lg lg:text-2xl font-bold mt-2 text-white hover:underline;
+}
+
+
 }

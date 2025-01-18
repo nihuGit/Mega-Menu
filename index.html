@@ -7,12 +7,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="nav-styles.css">
-    <link rel="stylesheet" href="blog-style.css">
     <link rel="stylesheet" href="style.css">
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
  
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+
+        
 
     
   </head>
@@ -315,78 +318,90 @@
 
       
       
-      <section class="font-sans text-neutral-text">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <section class="">
+        <div class="container__layout">
           <!-- Main Content Section -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="md:col-span-2 px-4 lg:px-6">
-              <header class="mb-12 mt-3">
-                <h1 class="text-xl text-primary-base font-bold">SEJ · Tools</h1>
+          <div class="container__grid">
+            <div class="content__main">
+              <header class="header__section">
+                <h4 class=" text-primary-base ">SEJ · Tools</h4>
               </header>
-              <div class="space-y-6">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6">Google Retires Web Vitals Extension, Moves Everything to DevTools</h1>
-                <p class="text-neutral-subtext font-thin text-lg">Google retires Web Vitals extension, integrates Core Web Vitals monitoring into DevTools' Performance panel</p>
+              <div class="content__section">
+                <h1 class="content__header-title inter-head">Google Retires Web Vitals Extension, Moves Everything to DevTools</h1>
+                <p class="content__paragraph inter-para">Google retires Web Vitals extension, integrates Core Web Vitals monitoring into DevTools' Performance panel</p>
               </div>
               <div class="mt-6">
                 <hr>
-                <h1 class="  text-4xl font-bold mt-6">Highlights</h1>
-                <ul class="list-disc list-inside space-y-2 py-4 mb-6">
-                  <li class="font-light"><span class="text-black font-bold mx-4"> - </span> Google ended support for the Web Vitals extension in January 2025.</li>
-                  <li class="font-light"><span class="text-black font-bold mx-4"> - </span>  Key features are now fully integrated into DevTools Performance panel.</li>
-                  <li class="font-light"><span class="text-black font-bold mx-4"> - </span> Developers should migrate to DevTools for Core Web Vitals monitoring.</li>
-                </ul> 
+                <!-- Highlights fixing required -->
+                <div class=" highlights__container">
+                  <h2 class="highlights__heading">Highlights</h2>
+                  <ul class="highlights__list">
+                    <li class="highlights__item">
+                      <span class="highlights__bullet"></span>
+                      <p class="highlights__text inter-para">Google refuses to implement EU-mandated fact-checking on its platforms.</p>
+                    </li>
+                    <li class="highlights__item">
+                      <span class="highlights__bullet"></span>
+                      <p class="highlights__text inter-para">Google claims its current moderation tools are already effective enough.</p>
+                    </li>
+                    <li class="highlights__item">
+                      <span class="highlights__bullet"></span>
+                      <p class="highlights__text inter-para">The decision challenges new EU Digital Services Act requirements.</p>
+                    </li>
+                  </ul>
+                </div>
                 
               </div>
               
                 <hr>
-              <div class="max-w-5xl mx-auto p-4 mt-6">
-                <div class="flex flex-wrap justify-between">
-                <div class="flex items-center space-x-4">
+              <div class="author-card">
+                <div class="author-card__header">
+                <div class="author-card__author">
                   <div class="">
-                    <img src="https://github.com/shadcn.png" alt="Author Image" class=" w-12 md:w-14 h-12 md:h-16 rounded-full">
+                    <img src="https://github.com/shadcn.png" alt="Author Image" class="author-card__author-image">
                   </div>
-                    <div class="space-y-1 lg:space-y-0">
-                        <p class="text-primary-base font-semibold text-xs">SEJ STAFF</p>
-                        <h1 class="text-base md:text-xl lg:text-2xl font-bold">Matt G. Southern</h1>
-                        <div class="flex flex-col lg:flex-row font-semibold">
-                        <p class="text-xs md:text-base lg:text-base  text-gray-400">January 14, 2025</p>
-                        <p class="text-xs md:text-base lg:text-base text-gray-400">2 min read</p>
+                    <div class="author-card__author-info">
+                        <p class="author-card__author-role inter-para">SEJ STAFF</p>
+                        <h4 class="inter-head ">Matt G. Southern</h4>
+                        <div class="author-card__meta">
+                        <p class="author-card__read-time inter-para">January 14, 2025- </p>
+                        <p class="author-card__read-time inter-para "> 2 min read</p>
                       </div>
                     </div>
                 </div>
         
                 <!-- Stats Section -->
-                <div class="flex justify-end space-x-8 mt-4 text-right">
+                <div class="author-card__stats">
                     <div>
-                        <p class="text-primary-base text-xl lg:text-2xl font-bold">73</p>
-                        <p class="text-black font-semibold text-sm">SHARES</p>
+                        <p class="author-card__stats-item">73</p>
+                        <p class="author-card__dark-stats-item">SHARES</p>
                     </div>
                     <div>
-                        <p class="text-primary-base md:text-2xl font-bold text-xl">8.5K</p>
-                        <p class="text-black font-semibold text-sm">READS</p>
+                        <p class="author-card__stats-item">8.5K</p>
+                        <p class="author-card__dark-stats-item">READS</p>
                     </div>
                 </div>
               </div>
                 <!-- Image Section -->
-                <div class="mt-6">
-                    <img src="images/author-image-01.webp" alt="Keyboard and Tools" class="w-full lg:rounded-lg">
+                <div class="author-card__image-container">
+                    <img src="images/author-image-01.webp" alt="Keyboard and Tools" class="author-card__main-image">
                 </div>
         
                 <!-- Content Section -->
                 
-                <div class="mt-10 sm:mx-auto ">
-                  <div class="rounded-xl bg-gradient-to-r from-purple-800 to-purple-500 p-8 text-white lg:px-10 lg:py-10">
-                      <div class="flex flex-col-reverse lg:flex-row-reverse items-center justify-between">
-                          <div class="sm:order-2 sm:ml-8 lg:ml-0 space-y-4 lg:w-2/3">
-                              <h2 class="text-xl lg:text-2xl font-bold  text-center lg:text-start">2025 Marketing Trends: The End Of SEO?</h2>
-                              <p class="mt-4">Join us as we demystify the latest trends, from AI to GEO, and provide actionable insights to help you achieve tangible results in 2025.</p>
+                <div class="webinar-card">
+                  <div class="webinar-card__container">
+                      <div class="webinar-card__content">
+                          <div class="webinar-card__text">
+                              <h4 class=" webinar-card__title">2025 Marketing Trends: The End Of SEO?</h4>
+                              <p class="webinar-card__description">Join us as we demystify the latest trends, from AI to GEO, and provide actionable insights to help you achieve tangible results in 2025.</p>
                           </div>
-                          <div class="py-6 flex flex-row lg:w-1/3 justify-center items-center">
-                              <h1 class="text-2xl lg:text-3xl font-bold lg:pt-6"><span class="text-primary-base ">SEJ</span> <span class="text-white">WEBINAR</span> </h1>
+                          <div class="webinar-card__branding">
+                              <h3 class="webinar-card__brand"><span class="text-primary-base ">SEJ</span> <span class="text-white">WEBINAR</span> </h3>
                           </div>
                       </div>
-                      <div class="mt-6">
-                          <a href="#" class="bg-cyan-400 hover:bg-cyan-500 text-purple-900 font-semibold py-3 px-8 rounded-lg inline-flex items-center">
+                      <div class="webinar-card__cta">
+                          <a href="#" class="webinar-card__button">
                               Register Now →
                           </a>
                       </div>
@@ -398,83 +413,83 @@
         
            
             <!--  -->
-            <div class="mt-4 lg:mt-8 text-lg md:text-xl mx-auto p-4 ">
+            <div class="content-container">
               <!-- Main Section -->
-              <section class=" shadow-none mb-10">
-                  <p class="text-gray-700 mb-8">Google has officially shut down its Web Vitals Chrome extension with the release of Chrome 132.</p>
-                  <p class="text-gray-700 mb-8">All its key features are now fully integrated into DevTools’ Performance panel, making it the go-to tool for measuring Core Web Vitals.</p>
-                  <p class="text-gray-700 mb-8">While nearly 200,000 users used the extension, the Chrome team has decided to focus solely on DevTools, which offers a more powerful and centralized platform for debugging site performance.</p>
+              <section class=" content-section">
+                  <p class="content-paragraph lora-para">Google has officially shut down its Web Vitals Chrome extension with the release of Chrome 132.</p>
+                  <p class="content-paragraph lora-para">All its key features are now fully integrated into DevTools’ Performance panel, making it the go-to tool for measuring Core Web Vitals.</p>
+                  <p class="content-paragraph lora-para">While nearly 200,000 users used the extension, the Chrome team has decided to focus solely on DevTools, which offers a more powerful and centralized platform for debugging site performance.</p>
               </section>
       
               <!-- Why the Extension Was Retired Section -->
-              <section class=" mb-8">
-                  <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-8">Why the Extension Was Retired</h2>
-                  <p class="text-gray-700 mb-8">The Web Vitals extension was great for early Core Web Vitals monitoring, but DevTools now offers the same functionality—and more.</p>
-                  <p class="text-gray-700 mb-8">By moving everything into DevTools, Google provides developers with a more seamless performance optimization workflow.</p>
+              <section class=" content-section">
+                  <h3 class=" content-heading">Why the Extension Was Retired</h3>
+                  <p class="content-paragraph lora-para">The Web Vitals extension was great for early Core Web Vitals monitoring, but DevTools now offers the same functionality—and more.</p>
+                  <p class="content-paragraph lora-para">By moving everything into DevTools, Google provides developers with a more seamless performance optimization workflow.</p>
               </section>
       
               <!-- What's New in DevTools Section -->
-              <section class=" mb-8">
-                  <h2 class="text-xl md:text-2xl lg:text-3xl  font-bold mb-8">What’s New in DevTools?</h2>
-                  <ul class="list-disc pl-6 space-y-6 text-gray-700">
-                      <li><strong>Live Metrics:</strong> Real-time Core Web Vitals data for your local tests.</li>
-                      <li><strong>Field Data:</strong> Compare local metrics to CrUX data for URLs and origins, including desktop and mobile views.</li>
-                      <li><strong>Largest Contentful Paint (LCP) Details:</strong> Find the specific element behind your LCP score, see phase breakdowns like Time to First Byte (TTFB), and render delay.</li>
-                      <li><strong>Interaction To Next Paint (INP) Interaction Log:</strong> Track interactions contributing to INP with detailed timing for input delay, processing, and presentation.</li>
-                      <li><strong>Cumulative Layout Shift (CLS) Log:</strong> See grouped layout shifts contributing to your CLS score.</li>
-                      <li><strong>Diagnostic Metrics:</strong> Includes TTFB and First Contentful Paint (FCP).</li>
+              <section class=" content-section">
+                  <h3 class="content-heading">What’s New in DevTools?</h3>
+                  <ul class="content-list">
+                      <li class="lora-para content-paragraph"><strong>Live Metrics:</strong> Real-time Core Web Vitals data for your local tests.</li>
+                      <li class="lora-para content-paragraph"><strong>Field Data:</strong> Compare local metrics to CrUX data for URLs and origins, including desktop and mobile views.</li>
+                      <li class="lora-para content-paragraph"><strong>Largest Contentful Paint (LCP) Details:</strong> Find the specific element behind your LCP score, see phase breakdowns like Time to First Byte (TTFB), and render delay.</li>
+                      <li class="lora-para content-paragraph"><strong>Interaction To Next Paint (INP) Interaction Log:</strong> Track interactions contributing to INP with detailed timing for input delay, processing, and presentation.</li>
+                      <li class="lora-para content-paragraph"><strong>Cumulative Layout Shift (CLS) Log:</strong> See grouped layout shifts contributing to your CLS score.</li>
+                      <li class="lora-para content-paragraph"><strong>Diagnostic Metrics:</strong> Includes TTFB and First Contentful Paint (FCP).</li>
                   </ul>
               </section>
       
               <!-- What Developers Should Do Next Section -->
-              <section class=" mb-10">
-                  <h2 class="text-xl md:text-2xl lg:text-3xl  font-bold mb-8">What Developers Should Do Next</h2>
-                  <p class="text-gray-700 mb-8">If you’re still using the Web Vitals extension, it’s time to switch to DevTools.</p>
-                  <p class="text-gray-700">Google has even created a <a href="#" class="text-blue-600 underline">migration guide</a> to make the transition easier.</p>
+              <section class=" content-section">
+                  <h3 class="content-heading">What Developers Should Do Next</h3>
+                  <p class="content-paragraph lora-para ">If you’re still using the Web Vitals extension, it’s time to switch to DevTools.</p>
+                  <p class="content-paragraph lora-para">Google has even created a <a href="#" class="text-blue-600 underline">migration guide</a> to make the transition easier.</p>
               </section>
       
               <!-- Looking Ahead Section -->
-              <section class="mb-10">
-                  <h2 class="text-xl md:text-2xl lg:text-3xl  font-bold mb-8">Looking Ahead</h2>
-                  <p class="text-gray-700 mb-8">This move signals Google’s commitment to making DevTools the best performance monitoring tool for developers. The Performance panel covers everything from Core Web Vitals to advanced diagnostics, and more updates are coming.</p>
-                  <p class="text-gray-700 mb-8">The Web Vitals extension was a helpful tool, but its best features now live in DevTools, making it easier for developers to monitor and optimize site performance from one place.</p>
+              <section class="content-section">
+                  <h3 class=" content-heading">Looking Ahead</h3>
+                  <p class="content-paragraph lora-para">This move signals Google’s commitment to making DevTools the best performance monitoring tool for developers. The Performance panel covers everything from Core Web Vitals to advanced diagnostics, and more updates are coming.</p>
+                  <p class="content-paragraph lora-para">The Web Vitals extension was a helpful tool, but its best features now live in DevTools, making it easier for developers to monitor and optimize site performance from one place.</p>
 
 
                   <!--  -->
                   
-                      <p class="text-lg text-gray-700">
+                      <p class="content-paragraph lora-para">
                         The Web Vitals extension was a helpful tool, but its best features now
                         live in DevTools, making it easier for developers to monitor and optimize
                         site performance from one place.
                       </p>
-                      <p class="mt-8 text-lg text-gray-700">
+                      <p class="content-paragraph lora-para">
                         For more details, check out the
                         <a
                           href="#"
-                          class="text-blue-500 hover:underline"
+                          class="content-link"
                           >official announcement</a
                         >
                         or the
                         <a
                           href="#"
-                          class="text-blue-500 hover:underline"
+                          class="content-link"
                           >GitHub repository</a
                         >.
                       </p>
-                      <hr class="my-8 border-gray-300" />
-                      <p class="text-sm md:text-base lg:text-lg text-gray-500">
+                      <hr class="content-divider" />
+                      <p class="content-caption lora-para">
                         Featured Image: William Potter/Shutterstock
                       </p>
-                      <div class="mt-8 flex gap-6">
+                      <div class="content-buttons">
                         <button
                           type="button"
-                          class="bg-gray-200 text-gray-700 text-sm md:text-base lg:text-lg px-3 md:px-4 py-1 rounded-full hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-400 "
+                          class="content-button"
                         >
                           News
                         </button>
                         <button
                           type="button"
-                          class="bg-gray-200 text-gray-700 text-sm md:text-base lg:text-lg px-3 md:px-4 py-1 rounded-full hover:bg-gray-300 focus:outline-none focus:ring focus:ring-gray-400"
+                          class="content-button"
                         >
                           Tools
                         </button>
@@ -489,22 +504,22 @@
             <!--  -->
 
            <!--  -->
-            <section class="bg-[#F5F7F7] p-6 rounded-xl  mx-auto">
-              <div class="flex flex-col sm:flex-row items-center sm:items-start">
+            <section class="profile-card">
+              <div class="profile-card__container">
                 <!-- Avatar Section -->
-                 <div class="flex flex-col lg:w-1/6">
+                 <div class="profile-card__avatar-section">
                 <div class="relative ">
                   <img
-                    class="w-24 h-24 rounded-full border-2 border-gray-200"
+                    class="w-24 h-24 rounded-full border-2 border-primary-base"
                     src="https://github.com/shadcn.png"
                     alt="Profile Picture"
                   />
                   <div
-                    class="absolute bottom-0 right-0 w-6 h-6 text-primary-base rounded-full flex items-center justify-center border-2 border-white"
+                    class="absolute bottom-0 right-0 w-6 h-6 text-primary-base rounded-full flex items-center justify-center border-2 border-primary-base"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4 text-white"
+                      class="h-4 w-4 text-primary-base"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -527,12 +542,12 @@
                 <!-- Content Section -->
                 <div class="sm:ml-6 mt-4 sm:mt-0 text-center sm:text-left lg:w-5/6">
                   <p class="text-sm md:text-base text-primary-base font-bold">SEJ STAFF</p>
-                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800 mt-1">Matt G. Southern</h2>
-                  <p class="text-sm lg:text-base ">
-                    <span class="text-black">Senior News Writer at</span> 
-                    <a href="#" class="text-primary-base hover:underline">Search Engine Journal</a>
+                  <h4 class="profile-card__name">Matt G. Southern</h4>
+                  <p class="profile-card__title">
+                    <span class="text-primary-dark">Senior News Writer at</span> 
+                    <a href="#" class="profile-card__link">Search Engine Journal</a>
                   </p>
-                  <p class="text-black font-thin mt-5 text-sm">
+                  <p class="content-paragraph mt-5">
                     Matt G. Southern, Senior News Writer, has been with Search Engine Journal since 2013.
                     With a bachelor’s degree in communications, ...
                   </p>
@@ -546,17 +561,17 @@
             <div class="bg-[#F5F7F7] p-12 rounded-3xl mx-auto mt-6">
               <!-- Header Section -->
               <div class="text-center lg:text-start">
-                <h1 class="text-2xl lg:text-4xl font-bold text-gray-800">
-                  <span class="text-black">SE</span>
+                <h2 class=" text-primary-dark">
+                  <span class="text-primary-dark">SE</span>
                   <span class="text-primary-base -mx-2">J</span>
-                  <span class="text-black">Today</span>
-                </h1>
-                <h2 class="text-2xl lg:text-4xl font-bold text-primary-base mt-4">
-                  Subscribe To Our Newsletter.
+                  <span class="text-primary-dark">Today</span>
                 </h2>
-                <p class="text-2xl lg:text-4xl text-black font-bold mt-2">
+                <h3 class=" text-primary-base mt-4">
+                  Subscribe To Our Newsletter.
+                </h3>
+                <h3 class="text-primary-dark mt-2">
                   Conquer your day with daily search marketing news.
-                </p>
+                </h3>
               </div>
             
               <!-- Form Section -->
@@ -564,7 +579,7 @@
                 <!-- Input Fields -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">
+                    <label for="email" class="block text-sm font-medium text-neutral-text">
                       Email<span class="text-red-500">*</span>
                     </label>
                     <input
@@ -576,7 +591,7 @@
                     />
                   </div>
                   <div>
-                    <label for="first-name" class="block text-sm font-medium text-gray-700">
+                    <label for="first-name" class="block text-sm font-medium text-neutral-text">
                       First Name<span class="text-red-500">*</span>
                     </label>
                     <input
@@ -592,7 +607,7 @@
                 <!-- Checkbox Section -->
                 <div class="mt-8 lg:flex items-center lg:space-x-10">
                   <label
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-medium text-neutral-text"
                     for="interests"
                   >
                     Topic of Interests<span class="text-red-500">*</span>
@@ -607,7 +622,7 @@
                         id="seo"
                         class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
                       />
-                      <label for="seo" class="ml-2 text-sm text-gray-700">SEO</label>
+                      <label for="seo" class="ml-2 text-sm text-neutral-text">SEO</label>
                     </div>
                     <div>
                       <input
@@ -615,7 +630,7 @@
                         id="content"
                         class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
                       />
-                      <label for="content" class="ml-2 text-sm text-gray-700">Content</label>
+                      <label for="content" class="ml-2 text-sm text-neutral-text">Content</label>
                     </div>
                     <div>
                       <input
@@ -623,7 +638,7 @@
                         id="social"
                         class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
                       />
-                      <label for="social" class="ml-2 text-sm text-gray-700">Social</label>
+                      <label for="social" class="ml-2 text-sm text-neutral-text">Social</label>
                     </div>
                     <div>
                       <input
@@ -631,7 +646,7 @@
                         id="ppc"
                         class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
                       />
-                      <label for="ppc" class="ml-2 text-sm text-gray-700">PPC</label>
+                      <label for="ppc" class="ml-2 text-sm text-neutral-text">PPC</label>
                     </div>
                   </div>
                 </div>
@@ -663,13 +678,13 @@
              <!-- Suggested -->
             
                  <section class=" mx-auto pt-4 mt-6">
-                     <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Suggested Articles</h2>
+                     <h2 class=" mb-6">Suggested Articles</h2>
                      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                          <!-- Article 1 -->
                          <div class=" overflow-hidden">
                              <img src="images/suggested-article.webp" alt="Article Image" class="w-full h-32 object-cover">
                              <div class="py-4">
-                                 <h3 class="text-lg font-semibold mb-2">Insights From Microsoft Ads Partners: Copilot And PMax</h3>
+                                 <h5 class=" mb-2">Insights From Microsoft Ads Partners: Copilot And PMax</h5>
                              </div>
                          </div>
              
@@ -677,7 +692,7 @@
                          <div class="overflow-hidden">
                              <img src="images/suggested-article.webp" alt="Article Image" class="w-full h-32 object-cover">
                              <div class="py-4">
-                                 <h3 class="text-lg font-semibold mb-2">Holiday SEO Pitfalls To Avoid: Common Mistakes And How To Fix Them</h3>
+                                 <h5 class="mb-2">Holiday SEO Pitfalls To Avoid: Common Mistakes And How To Fix Them</h5>
                              </div>
                          </div>
              
@@ -685,7 +700,7 @@
                          <div class="  overflow-hidden">
                              <img src="images/suggested-article.webp" alt="Article Image" class="w-full h-32 object-cover">
                              <div class="py-4">
-                                 <h3 class="text-lg font-semibold mb-2">What 7 SEO Experts Think About AI Overviews And Where Search Is Going</h3>
+                                 <h5 class=" mb-2">What 7 SEO Experts Think About AI Overviews And Where Search Is Going</h5>
                              </div>
                          </div>
                      </div>
@@ -698,13 +713,13 @@
             <section class="w-full ">
               <div class=" justify-center flex flex-col">
               <div class="bg-[#F5F7F7] rounded-lg  p-6 max-w-md w-full text-center">
-                  <h1 class=" text-2xl md:text-3xl lg:text-4xl font-bold  mb-2">
-                    <span class="text-black">SE</span>
+                  <h2 lass="  mb-2">
+                    <span class="text-primary-dark">SE</span>
                     <span class="text-primary-base -mx-2">J</span>
-                    <span class="text-black">Today</span>
-                  </h1>
+                    <span class="text-primary-dark">Today</span>
+                  </h2>
                   <p class="text-2xl md:text-3xl  font-semibold text-primary-base">Join Our Newsletter.</p>
-                  <p class="text-black font-bold mb-6 text-2xl md:text-3xl l">Get your daily dose of search know-how.</p>
+                  <p class="text-primary-dark font-bold mb-6 text-2xl md:text-3xl l">Get your daily dose of search know-how.</p>
           
                   <form class="space-y-10 mx-5">
                       <input 
