@@ -317,11 +317,11 @@
       <section class="container__layout">
         <div class="container__grid">
           <div class="content__main">
-            <div class="md:col-span-2 px-4 lg:px-6">
-                <div class="flex items-center justify-between">
-                    <h1 class="text-4xl lg:text-5xl font-bold mb-6  text-primary-dark">News</h1>
-                    <div class="relative">
-                        <select class="appearance-none border mb-3 bg-neutral-background border-natural-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:shadow-lg active:shadow-lg">
+            <div class="category-section">
+                <div class="category-section__controls">
+                    <h1 class="category-section__heading inter-head">News</h1>
+                    <div class="category-section__dropdown">
+                        <select class="category-section__select">
                             <option value="all">All</option>
                             <option value="generative-ai">Generative AI</option>
                             <option value="seo">SEO</option>
@@ -333,29 +333,26 @@
                         
                     </div>
                 </div>
-                <p class="text-primary-dark font-thin text-lg lg:text-xl mt-2 font-sans leading-relaxed">
+                <div>
+                <p class="category-section__description inter-para">
                     Breaking news, updates, trends, and the latest info you need to know about
-                     <span  class="text-primary-base underline"> SEO </span>,
+                     <span href="#"  class="category-section__highlight"> SEO </span>,
                       Google and 
-                      <span href="#" class="text-primary-base underline">other search engines</span>,
+                      <span href="#" class="category-section__link">other search engines</span>,
                        top PPC platforms, and popular
-                        <span href="#" class="text-primary-base underline">social media networks</span>. 
+                        <span href="#" class="category-section__link">social media networks</span>. 
                         For breaking news and the latest updates, follow us on
-                         <span href="#" class="text-primary-base underline">Google News</span>
-                          or subscribe to our <span href="#" class="text-primary-base underline">newsletter</span>.
-                </p>
+                         <span href="#" class="category-section__link">Google News</span>
+                          or subscribe to our <span href="#" class="category-section__link">newsletter</span>.
+                        </p>
+                </div>
    
               <div class=" mt-6">
-                
-               
-        
-                <!-- Content Section -->
-                
                 <div class="webinar-card">
                   <div class="webinar-card__container">
                       <div class="webinar-card__content">
                           <div class="webinar-card__text">
-                              <h4 class=" webinar-card__title">2025 Marketing Trends: The End Of SEO?</h4>
+                              <h3 class=" webinar-card__title">2025 Marketing Trends: The End Of SEO?</h3>
                               <p class="webinar-card__description">Join us as we demystify the latest trends, from AI to GEO, and provide actionable insights to help you achieve tangible results in 2025.</p>
                           </div>
                           <div class="webinar-card__branding">
@@ -376,19 +373,20 @@
 
 
             <!-- new cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 lg:mt-20">
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+            <div class="content-container">
+            <div class="category-cards">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -396,18 +394,18 @@
                   </div>
               </div>
 
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -415,18 +413,18 @@
                   </div>
               </div>
 
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -434,18 +432,18 @@
                   </div>
               </div>
 
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -453,18 +451,18 @@
                   </div>
               </div>
 
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -472,18 +470,18 @@
                   </div>
               </div>
 
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -491,18 +489,18 @@
                   </div>
               </div>
 
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -510,18 +508,18 @@
                   </div>
               </div>
 
-              <div class=" overflow-hidden">
-                <p class="text-primary-base font-bold text-xs py-4">NEWS • GENERATIVE AI</p>
-                  <img src="images/banner-bg.jpg" alt="News 1" class="w-full h-40 object-cover">
-                  <div class="py-4">
+              <div class="category-cards__item">
+                <p class="category-cards__tag">NEWS • GENERATIVE AI</p>
+                  <img src="images/banner-bg.jpg" alt="News 1" class="category-cards__image">
+                  <div class="category-cards__content">
                       
-                      <h3 class="text-lg lg:text-2xl font-bold mt-2">Google Study: 29% In The U.S. & Canada Used AI Last Year</h3>
-                      <div class="flex items-center space-x-3 mt-2">
+                      <h4 class="category-cards__title inter-head">Google Study: 29% In The U.S. & Canada Used AI Last Year</h4>
+                      <div class="category-cards__author">
                           
-                          <p class="text-primary-base font-semibold text-sm">By Matt G. Southern</p>
+                          <p class="category-cards__author-name inter-para">By Matt G. Southern</p>
                       </div>
-                      <p class="text-sm md:text-base text-primary-dark font-normal mt-4">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
-                      <p class="text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4">
+                      <p class="category-cards__description inter-para">Google-Ipsos study shows global AI adoption rising, but North America lags as trust and communication remain key challenges.</p>
+                      <p class="category-cards__meta inter-para">
                           <span > <i class="fa-regular fa-clock" class="pr-2"></i> 3 min read</span>
                           <span><i class="fa-regular fa-eye"></i> 1.5k</span>
                           <span>Nov 24, 2022</span>
@@ -529,28 +527,30 @@
                   </div>
               </div>
           </div>
+          </div>
+          
             <!-- new cards -->
         
-            <div class="flex justify-center items-center mt-3 lg:mt-6">
+            <div class="pagination">
               <!-- Pagination Component -->
-              <div class="flex items-center space-x-2">
+              <div class="pagination__container">
                 <!-- previous button -->
-                <button class="text-primary-base px-4 py-2 hover:underline hidden">« Previous</button>
+                <button class="pagination__button--hidden">« Previous</button>
                 <!-- Active Page -->
-                <button class="bg-black text-black px-4 py-2 rounded">1</button>
+                <button class="pagination__button--active">1</button>
           
                 <!-- Other Pages -->
-                <button class="text-primary-base px-4 py-2 hover:underline">2</button>
-                <button class="text-primary-base px-4 py-2 hover:underline">3</button>
+                <button class="pagination__button">2</button>
+                <button class="pagination__button">3</button>
           
                 <!-- Ellipsis -->
-                <span class="text-gray-500">...</span>
+                <span class="pagination__ellipsis">...</span>
           
                 <!-- Last Page -->
-                <button class="text-primary-base px-4 py-2 hover:underline">234</button>
+                <button class="pagination__button">234</button>
           
                 <!-- Next Button -->
-                <button class="text-primary-base px-4 py-2 hover:underline">Next »</button>
+                <button class="pagination__button">Next »</button>
               </div>
             </div>
 
@@ -558,86 +558,84 @@
             </div>
       
             <!-- Sidebar Section -->
-            <section class="w-full ">
-              <div class=" flex justify-center  flex-col">
-              <div class="bg-[#F5F7F7] rounded-lg  p-6 max-w-md w-full text-center">
-                  <h1 class=" text-2xl md:text-3xl lg:text-4xl font-bold  mb-2">
-                    <span class="text-primary-dark">SE</span>
-                    <span class="text-primary-base -mx-2">J</span>
-                    <span class="text-primary-dark mx-2">Today</span>
-                  </h1>
-                  <p class="text-2xl md:text-3xl  font-semibold text-primary-base">Join Our Newsletter.</p>
-                  <p class="text-primary-dark font-bold mb-6 text-2xl md:text-3xl l">Get your daily dose of search know-how.</p>
+            <section class="subscription-section">
+              <div class=" subscription-section__container">
+              <div class="subscription-section__card">
+                  <h2 lass="  subscription-section__title inter-heading">
+                    <span class="subscription-section__title-dark ">SE</span>
+                    <span class="subscription-section__title-highlight">J</span>
+                    <span class="subscription-section__title-dark">Today</span>
+                  </h2>
+                  <p class="subscription-section__subtitle inter-para">Join Our Newsletter.</p>
+                  <p class="subscription-section__description inter-para">Get your daily dose of search know-how.</p>
           
-                  <form class="space-y-10 mx-5">
+                  <form class="subscription-section__form">
                       <input 
                           type="email" 
                           placeholder="Email Address*" 
-                          class="w-full border border-neutral-border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base"
+                          class="subscription-section__input"
                           required
                       >
                       <button 
                           type="submit" 
-                          class=" w-2/3 bg-green-500 text-white font-bold py-2  hover:bg-primary-base focus:ring-2 focus:ring-primary-base"
+                          class=" subscription-section__button"
                       >
                           SUBSCRIBE
                       </button>
                   </form>
           
-                  <p class="text-xs md:text-sm text-neutral-subtext mt-4 leading-loose">
+                  <p class="subscription-section__disclaimer">
                       By clicking the "Subscribe" button, I agree and accept the 
-                      <a href="#" class="text-primary-base underline">privacy policy</a> of Search Engine Journal.
+                      <a href="category-page.html" class="subscription-section__link">privacy policy</a> of Search Engine Journal.
                   </p>
               </div>
 
-
               <div class="mt-4 lg:mt-8">
-                <div class="flex flex-col">
+                <div class="marketing-trends">
 
-                  <div class="w-full">
+                  <div class="marketing-trends__image-container">
   
-                    <img src="images/sidebarImage.webp" class="w-full " alt="">
+                    <img src="images/sidebarImage.webp" class="marketing-trends__image" alt="">
   
                   </div>
-                  <div class="py-4 bg-green-500 px-4">
+                  <div class="marketing-trends__content">
                       
-                    <h3 class="text-lg lg:text-2xl font-bold mt-2 text-white hover:underline">2025 Marketing trnds : End of SEO?</h3>
+                    <h3 class="marketing-trends__headline inter-head">2025 Marketing trnds : End of SEO?</h3>
                     
                 </div>
               </div>
-
+              </div>
               <div class="mt-4 lg:mt-8">
-                <div class="flex flex-col">
+                <div class="marketing-trends">
 
-                  <div class="w-full">
+                  <div class="marketing-trends__image-container">
   
-                    <img src="images/sidebarImage2.webp" class="w-full " alt="">
+                    <img src="images/sidebarImage2.webp" class="marketing-trends__image" alt="">
   
                   </div>
-                  <div class="py-4 bg-green-500 px-4">
+                  <div class="marketing-trends__content">
                       
-                    <h3 class="text-lg lg:text-2xl font-bold mt-2 text-white hover:underline">
-                      18 Essential Accessibility Changes To Drive Increased Website Growth
-                      </h3>
+                    <h3 class="marketing-trends__headline inter-head">2025 Marketing trnds : End of SEO?</h3>
                     
                 </div>
               </div>
-
+              </div>
               <div class="mt-4 lg:mt-8">
-                <div class="flex flex-col">
+                <div class="marketing-trends">
 
-                  <div class="w-full">
+                  <div class="marketing-trends__image-container">
   
-                    <img src="images/sidebarImage3.webp" class="w-full " alt="">
+                    <img src="images/sidebarImage3.webp" class="marketing-trends__image" alt="">
   
                   </div>
-                  <div class="py-4 bg-green-500 px-4">
+                  <div class="marketing-trends__content">
                       
-                    <h3 class="text-lg lg:text-2xl font-bold mt-2 text-white hover:underline">SEO Trends 2024</h3>
+                    <h3 class="marketing-trends__headline inter-head">2025 Marketing trnds : End of SEO?</h3>
                     
                 </div>
               </div>
-             
+              </div>
+              
               
           </section>
       
@@ -646,48 +644,48 @@
             </div>
             
             <!-- Form -->
-            <section class="flex justify-center items-center">
-              <div class="bg-neutral-background p-12 rounded-3xl mx-auto mt-6 lg:py-20 lg:px-16 w-full ">
-                <div class="flex flex-col lg:flex-row items-start lg:space-x-6">
+            <section class="subscription-category__section">
+              <div class="subscription-category__container">
+                <div class="subscription-category__content">
                   <!-- Left Section -->
-                  <div class="text-center lg:text-start">
-                    <h1 class="text-2xl lg:text-4xl font-bold text-gray-800">
-                      <span class="text-primary-dark">SE</span>
-                      <span class="text-primary-base -mx-2">J</span>
-                      <span class="text-primary-dark">Today</span>
-                    </h1>
-                    <h2 class="text-2xl lg:text-3xl font-bold text-primary-base mt-4">
-                      Subscribe To Our Newsletter.
+                  <div class="subscription-category__left">
+                    <h2 class="subscription-category__title">
+                      <span class="subscription-category__highlight--dark">SE</span>
+                      <span class="subscription-category__highlight--base">J</span>
+                      <span class="subscription-category__highlight--dark">Today</span>
                     </h2>
-                    <p class="text-2xl lg:text-3xl text-primary-dark font-bold mt-2">
+                    <h3 class="subscription-category__heading">
+                      Subscribe To Our Newsletter.
+                    </h3>
+                    <h3 class="subscription-category__subheading">
                       Conquer your day with daily search marketing news.
-                    </p>
+                    </h3>
                   </div>
           
                   <!-- Right Section -->
-                  <div class="flex-1">
-                    <form class="space-y-4">
-                      <div class="flex flex-col lg:flex-row lg:space-x-10 space-y-6 lg:space-y-0">
-                        <input type="email" placeholder="Email*" class="border border-neutral-border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base" required>
-                        <input type="text" placeholder="First Name*" class=" border border-neutral-border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base" required>
+                  <div class="subscription-category__right">
+                    <form class="subscription-category__form">
+                      <div class="subscription-category__input-group">
+                        <input type="email" placeholder="Email*" class="subscription-category__input" required>
+                        <input type="text" placeholder="First Name*" class=" subscription-category__input" required>
                       </div>
           
-                      <div class="mt-8 lg:flex items-center lg:space-x-10">
+                      <div class="subscription-category__checkbox-group">
                         <label
-                          class="block text-sm font-medium text-neutral-text"
+                          class="subscription-category__checkbox-label"
                           for="interests"
                         >
-                          Topic of Interests<span class="text-red-500">*</span>
+                          Topic of Interests<span class="subscription-category__required">*</span>
                         </label>
                         <div
                           id="interests"
-                          class="flex flex-wrap gap-4 mt-2"
+                          class="subscription-category__checkbox-options"
                         >
                           <div>
                             <input
                               type="checkbox"
                               id="seo"
-                              class="rounded border-neutral-border text-primary-base focus:ring-primary-base"
+                              class="subscription-category__checkbox"
                             />
                             <label for="seo" class="ml-2 text-sm text-neutral-text">SEO</label>
                           </div>
@@ -695,36 +693,36 @@
                             <input
                               type="checkbox"
                               id="content"
-                              class="rounded border-neutral-border text-primary-base focus:ring-primary-base"
+                              class="subscription-category__checkbox"
                             />
-                            <label for="content" class="ml-2 text-sm text-neutral-text">Content</label>
+                            <label for="content" class="subscription-category__checkbox-text">Content</label>
                           </div>
                           <div>
                             <input
                               type="checkbox"
                               id="social"
-                              class="rounded border-neutral-border text-primary-base focus:ring-primary-base"
+                              class="subscription-category__checkbox"
                             />
-                            <label for="social" class="ml-2 text-sm text-neutral-text">Social</label>
+                            <label for="social" class="subscription-category__checkbox-text">Social</label>
                           </div>
                           <div>
                             <input
                               type="checkbox"
                               id="ppc"
-                              class="rounded border-neutral-border text-primary-base focus:ring-primary-base"
+                              class="subscription-category__checkbox"
                             />
-                            <label for="ppc" class="ml-2 text-sm text-neutral-text">PPC</label>
+                            <label for="ppc" class="subscription-category__checkbox-text">PPC</label>
                           </div>
                         </div>
                       </div>
           
-                      <div class="space-y-4">
-                      <p class="text-sm text-neutral-subtext">By clicking the "Subscribe" button, I agree and accept the <a href="#" class="text-primary-base underline">privacy policy</a> of Search Engine Journal.</p>
+                      <div class="subscription-category__footer">
+                      <p class="subscription-category__privacy-text">By clicking the "Subscribe" button, I agree and accept the <a href="#" class="subscription-category__privacy-link">privacy policy</a> of Search Engine Journal.</p>
           
-                      <div class="mt-6 text-center lg:w-1/3">
+                      <div class="subscription-category__button-wrapper">
                         <button
                           type="submit"
-                          class="px-6 py-2 bg-green-500 text-white text-sm font-medium  hover:bg-green-700 focus:ring-4 focus:ring-primary-base w-full"
+                          class="subscription-category__button"
                         >
                           SUBSCRIBE
                         </button>

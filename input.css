@@ -39,6 +39,7 @@
 }
 
 @layer utilities {
+
     .container__layout {
         @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
     }
@@ -198,7 +199,7 @@
 
     /* paragraphs */
     .content-container {
-      @apply mt-4 lg:mt-8 text-lg mx-auto p-4;
+      @apply mt-4 lg:mt-8 mx-auto p-4;
     }
 
     /* Section Styling */
@@ -213,7 +214,7 @@
 
     /* Paragraphs */
     .content-paragraph {
-      @apply text-neutral-text mb-8;
+      @apply text-neutral-text mb-8 text-lg lg:text-xl leading-relaxed tracking-wide;
     }
 
     /* Links */
@@ -293,7 +294,7 @@
 }
 
 .profile-card__name {
-  @apply text-xl lg:text-2xl font-bold text-primary-dark mt-1;
+  @apply  text-primary-dark mt-1;
 }
 
 .profile-card__title {
@@ -305,11 +306,11 @@
 }
 
 .profile-card__bio {
-  @apply text-primary-dark font-thin mt-5 text-sm;
+  @apply text-neutral-subtext font-thin mt-5 text-sm md:text-base ;
 }
 
 /* Newsletter Container */
-.newsletter {
+.newsletter__container {
   @apply bg-[#F5F7F7] p-12 rounded-3xl mx-auto mt-6;
 }
 
@@ -317,12 +318,12 @@
   @apply text-center lg:text-start;
 }
 
-.newsletter__title {
+.newsletter__text-dark {
   @apply text-primary-dark;
 }
 
-.newsletter__subtitle {
-  @apply text-primary-base mt-4;
+.newsletter__text-green {
+  @apply text-primary-base;
 }
 
 .newsletter__description {
@@ -393,11 +394,11 @@
 }
 
 .newsletter__button {
-  @apply px-6 py-2 bg-green-500 text-white text-sm font-medium rounded-md hover:bg-green-700 focus:ring-4 focus:ring-primary-base w-full;
+  @apply px-6 py-2 bg-primary-base text-white text-sm font-medium rounded-md hover:bg-green-700 focus:ring-4 focus:ring-primary-base w-full;
 }
 
 /* Suggested Articles Section */
-.suggested-articles {
+.suggested-articles__container {
   @apply mx-auto pt-4 mt-6;
 }
 
@@ -434,7 +435,7 @@
 }
 
 .subscription-section__card {
-  @apply bg-[#F5F7F7] rounded-lg p-6 max-w-md w-full text-center;
+  @apply bg-[#F5F7F7] rounded-2xl px-6 py-8 max-w-md w-full text-center;
 }
 
 .subscription-section__title {
@@ -450,11 +451,11 @@
 }
 
 .subscription-section__subtitle {
-  @apply text-2xl md:text-3xl font-semibold text-primary-base;
+  @apply text-2xl md:text-3xl font-semibold text-primary-base mt-5;
 }
 
 .subscription-section__description {
-  @apply text-primary-dark font-bold mb-6 text-2xl md:text-3xl;
+  @apply text-primary-dark font-bold mb-6 text-2xl md:text-3xl mt-3;
 }
 
 .subscription-section__form {
@@ -466,7 +467,7 @@
 }
 
 .subscription-section__button {
-  @apply w-2/3 bg-green-500 text-white font-bold py-2 hover:bg-green-600 focus:ring-2 focus:ring-primary-base;
+  @apply w-2/3 bg-primary-base text-white font-bold py-2 hover:bg-green-600 focus:ring-2 focus:ring-primary-base;
 }
 
 .subscription-section__disclaimer {
@@ -479,7 +480,7 @@
 
 /* Marketing Trends Section */
 .marketing-trends {
-  @apply mt-4 lg:mt-8 flex flex-col;
+  @apply  flex flex-col;
 }
 
 .marketing-trends__image-container {
@@ -491,11 +492,260 @@
 }
 
 .marketing-trends__content {
-  @apply py-4 bg-green-500 px-4;
+  @apply py-4 bg-primary-base px-4;
 }
 
 .marketing-trends__headline {
   @apply text-lg lg:text-2xl font-bold mt-2 text-white hover:underline;
+}
+
+
+
+/* Category page classes  */
+/* Base container for the category section */
+.category-section {
+  @apply md:col-span-2 px-4 lg:px-6;
+}
+
+/* Controls (heading + dropdown) */
+.category-section__controls {
+  @apply flex items-center justify-between;
+}
+
+/* Section heading */
+.category-section__heading {
+  @apply  mb-6 text-primary-dark;
+}
+
+/* Dropdown container */
+.category-section__dropdown {
+  @apply relative;
+}
+
+/* Dropdown select styles */
+.category-section__select {
+  @apply appearance-none border mb-3 bg-neutral-background border-neutral-border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:shadow-lg active:shadow-lg;
+}
+
+/* Description paragraph */
+.category-section__description {
+  @apply text-primary-dark text-lg lg:text-xl mt-2 font-sans leading-relaxed;
+}
+
+/* Highlighted text in the description */
+.category-section__highlight {
+  @apply text-primary-base underline;
+}
+
+/* Links inside the description */
+.category-section__link {
+  @apply text-primary-base underline;
+}
+
+/* Additional content container */
+.category-section__additional {
+  @apply mt-6;
+}
+
+/* Grid container for category cards */
+.category-cards {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6 lg:mt-8;
+}
+
+/* Individual card container */
+.category-cards__item {
+  @apply overflow-hidden;
+}
+
+/* Tag or category label */
+.category-cards__tag {
+  @apply text-primary-base font-bold text-xs py-4;
+}
+
+/* Image within the card */
+.category-cards__image {
+  @apply w-full h-auto object-cover;
+}
+
+/* Content wrapper */
+.category-cards__content {
+  @apply py-4;
+}
+
+/* Title of the card */
+.category-cards__title {
+  @apply mt-2;
+}
+
+/* Author container */
+.category-cards__author {
+  @apply flex items-center space-x-3 mt-2;
+}
+
+/* Author name */
+.category-cards__author-name {
+  @apply text-primary-base font-semibold text-sm;
+}
+
+/* Card description */
+.category-cards__description {
+  @apply text-sm md:text-base text-primary-dark font-normal mt-4;
+}
+
+/* Metadata (time, views, date) */
+.category-cards__meta {
+  @apply text-xs md:text-sm text-primary-dark font-light mt-3 flex items-center space-x-4;
+}
+
+
+/* Pagination container */
+.pagination {
+  @apply flex justify-center items-center mt-3 lg:mt-6;
+}
+
+/* Pagination button container */
+.pagination__container {
+  @apply flex items-center space-x-2;
+}
+
+/* Default button style */
+.pagination__button {
+  @apply text-primary-base px-4 py-2 hover:underline;
+}
+
+/* Active button style */
+.pagination__button--active {
+  @apply bg-primary-dark text-white px-4 py-2 rounded;
+}
+
+/* Hidden button style (for Previous button when inactive) */
+.pagination__button--hidden {
+  @apply text-primary-base px-4 py-2 hover:underline hidden;
+}
+
+/* Ellipsis */
+.pagination__ellipsis {
+  @apply text-neutral-placeholder;
+}
+
+/* Subscription Section */
+/* Category: Subscription Section */
+.subscription-category__section {
+  @apply flex justify-center items-center;
+}
+
+/* Category: Subscription Container */
+.subscription-category__container {
+  @apply bg-neutral-background p-12 rounded-3xl mx-auto mt-6 lg:py-20 lg:px-16 w-full;
+}
+
+/* Category: Subscription Content */
+.subscription-category__content {
+  @apply flex flex-col lg:flex-row items-start lg:space-x-6;
+}
+
+/* Category: Left Section */
+.subscription-category__left {
+  @apply text-center lg:text-start;
+}
+
+/* Category: Title */
+.subscription-category__title {
+  @apply  text-gray-800;
+}
+
+/* Category: Highlights */
+.subscription-category__highlight--dark {
+  @apply text-primary-dark;
+}
+
+.subscription-category__highlight--base {
+  @apply text-primary-base -mx-2;
+}
+
+/* Category: Heading */
+.subscription-category__heading {
+  @apply  text-primary-base mt-4;
+}
+
+/* Category: Subheading */
+.subscription-category__subheading {
+  @apply  text-primary-dark mt-2;
+}
+
+/* Category: Right Section */
+.subscription-category__right {
+  @apply flex-1;
+}
+
+/* Category: Form */
+.subscription-category__form {
+  @apply space-y-4;
+}
+
+/* Category: Input Group */
+.subscription-category__input-group {
+  @apply flex flex-col lg:flex-row lg:space-x-10 space-y-6 lg:space-y-0;
+}
+
+/* Category: Input Fields */
+.subscription-category__input {
+  @apply border border-neutral-border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base;
+}
+
+/* Category: Checkbox Group */
+.subscription-category__checkbox-group {
+  @apply mt-8 lg:flex items-center lg:space-x-10;
+}
+
+/* Category: Checkbox Label */
+.subscription-category__checkbox-label {
+  @apply block text-sm font-medium text-neutral-text;
+}
+
+/* Category: Required Indicator */
+.subscription-category__required {
+  @apply text-red-500;
+}
+
+/* Category: Checkbox Options */
+.subscription-category__checkbox-options {
+  @apply flex flex-wrap gap-4 mt-2;
+}
+
+/* Category: Checkbox */
+.subscription-category__checkbox {
+  @apply rounded border-neutral-border text-primary-base focus:ring-primary-base;
+}
+
+/* Category: Checkbox Text */
+.subscription-category__checkbox-text {
+  @apply ml-2 text-sm text-neutral-text;
+}
+
+/* Category: Footer Section */
+.subscription-category__footer {
+  @apply space-y-4;
+}
+
+/* Category: Privacy Text */
+.subscription-category__privacy-text {
+  @apply text-sm text-neutral-subtext;
+}
+
+/* Category: Privacy Link */
+.subscription-category__privacy-link {
+  @apply text-primary-base underline;
+}
+
+/* Category: Button Wrapper */
+.subscription-category__button-wrapper {
+  @apply mt-6 text-center lg:w-1/3;
+}
+
+/* Category: Button */
+.subscription-category__button {
+  @apply px-6 py-2 bg-primary-base text-white text-sm font-medium hover:bg-green-700 focus:ring-4 focus:ring-primary-base w-full;
 }
 
 

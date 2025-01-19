@@ -508,18 +508,18 @@
               <div class="profile-card__container">
                 <!-- Avatar Section -->
                  <div class="profile-card__avatar-section">
-                <div class="relative ">
+                <div class="profile-card__avatar-wrapper ">
                   <img
-                    class="w-24 h-24 rounded-full border-2 border-primary-base"
+                    class="profile-card__avatar-image"
                     src="https://github.com/shadcn.png"
                     alt="Profile Picture"
                   />
                   <div
-                    class="absolute bottom-0 right-0 w-6 h-6 text-primary-base rounded-full flex items-center justify-center border-2 border-primary-base"
+                    class="profile-card__status-badge"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4 text-primary-base"
+                      class="profile-card__status-icon"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -534,20 +534,20 @@
                 </div>
                 <button
                     type="button"
-                    class="mt-4 px-2 py-1 text-sm font-medium text-black border-2 border-black  bg-gray-100 rounded-3xl shadow-sm hover:bg-gray-200 focus:outline-none focus:ring focus:ring-gray-300"
+                    class="profile-card__button"
                   >
                     Read more
                   </button>
               </div>
                 <!-- Content Section -->
-                <div class="sm:ml-6 mt-4 sm:mt-0 text-center sm:text-left lg:w-5/6">
-                  <p class="text-sm md:text-base text-primary-base font-bold">SEJ STAFF</p>
+                <div class="profile-card__content">
+                  <p class="profile-card__role">SEJ STAFF</p>
                   <h4 class="profile-card__name">Matt G. Southern</h4>
                   <p class="profile-card__title">
-                    <span class="text-primary-dark">Senior News Writer at</span> 
+                    <span class="profile-card__name">Senior News Writer at</span> 
                     <a href="#" class="profile-card__link">Search Engine Journal</a>
                   </p>
-                  <p class="content-paragraph mt-5">
+                  <p class="profile-card__bio mt-5">
                     Matt G. Southern, Senior News Writer, has been with Search Engine Journal since 2013.
                     With a bachelor’s degree in communications, ...
                   </p>
@@ -558,113 +558,113 @@
             <!--  -->
 
             <!-- Form -->
-            <div class="bg-[#F5F7F7] p-12 rounded-3xl mx-auto mt-6">
+            <div class="newsletter__container">
               <!-- Header Section -->
-              <div class="text-center lg:text-start">
-                <h2 class=" text-primary-dark">
-                  <span class="text-primary-dark">SE</span>
-                  <span class="text-primary-base -mx-2">J</span>
-                  <span class="text-primary-dark">Today</span>
+              <div class="newsletter__header">
+                <h2 class=" ">
+                  <span class="newsletter__text-dark">SE</span>
+                  <span class="newsletter__text-green -mx-2">J</span>
+                  <span class="newsletter__text-dark">Today</span>
                 </h2>
-                <h3 class=" text-primary-base mt-4">
+                <h3 class=" newsletter__text-green mt-4">
                   Subscribe To Our Newsletter.
                 </h3>
-                <h3 class="text-primary-dark mt-2">
+                <h3 class="newsletter__description">
                   Conquer your day with daily search marketing news.
                 </h3>
               </div>
             
               <!-- Form Section -->
-              <form class="mt-6">
+              <form class="newsletter__form">
                 <!-- Input Fields -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="newsletter__fields">
                   <div>
-                    <label for="email" class="block text-sm font-medium text-neutral-text">
+                    <label for="email" class="newsletter__label">
                       Email<span class="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
                       id="email"
                       placeholder="Email Address*"
-                      class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-base focus:border-primary-base"
+                      class="newsletter__input"
                       required
                     />
                   </div>
                   <div>
-                    <label for="first-name" class="block text-sm font-medium text-neutral-text">
+                    <label for="first-name" class="newsletter__label">
                       First Name<span class="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
                       id="first-name"
                       placeholder="First Name*"
-                      class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary-base focus:border-primary-base"
+                      class="newsletter__input"
                       required
                     />
                   </div>
                 </div>
             
                 <!-- Checkbox Section -->
-                <div class="mt-8 lg:flex items-center lg:space-x-10">
+                <div class="newsletter__checkbox-section">
                   <label
-                    class="block text-sm font-medium text-neutral-text"
+                    class="newsletter__label"
                     for="interests"
                   >
                     Topic of Interests<span class="text-red-500">*</span>
                   </label>
                   <div
                     id="interests"
-                    class="flex flex-wrap gap-4 mt-2"
+                    class="newsletter__checkbox-group"
                   >
                     <div>
                       <input
                         type="checkbox"
                         id="seo"
-                        class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
+                        class="newsletter__checkbox"
                       />
-                      <label for="seo" class="ml-2 text-sm text-neutral-text">SEO</label>
+                      <label for="seo" class="newsletter__checkbox-label">SEO</label>
                     </div>
                     <div>
                       <input
                         type="checkbox"
                         id="content"
-                        class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
+                        class="newsletter__checkbox"
                       />
-                      <label for="content" class="ml-2 text-sm text-neutral-text">Content</label>
+                      <label for="content" class="newsletter__checkbox-label">Content</label>
                     </div>
                     <div>
                       <input
                         type="checkbox"
                         id="social"
-                        class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
+                        class="newsletter__checkbox"
                       />
-                      <label for="social" class="ml-2 text-sm text-neutral-text">Social</label>
+                      <label for="social" class="newsletter__checkbox-label">Social</label>
                     </div>
                     <div>
                       <input
                         type="checkbox"
                         id="ppc"
-                        class="rounded border-gray-300 text-primary-base focus:ring-primary-base"
+                        class=" newsletter__checkbox"
                       />
-                      <label for="ppc" class="ml-2 text-sm text-neutral-text">PPC</label>
+                      <label for="ppc" class="newsletter__checkbox-label">PPC</label>
                     </div>
                   </div>
                 </div>
             
                 <!-- Privacy Policy -->
-                 <div class="lg:flex item-center mt-3 lg:mt-6">
-                  <div class="lg:w-2/3">
-                <p class="mt-4 text-sm text-gray-500 ">
+                 <div class="newsletter__footer">
+                  <div class="newsletter__policy">
+                <p class="newsletter__policy-text">
                   By clicking the "Subscribe" button, I agree and accept the
-                  <a href="#" class="text-primary-base hover:underline">privacy policy</a> of
+                  <a href="#" class="newsletter__policy-link">privacy policy</a> of
                   Search Engine Journal.
                 </p>
               </div>
                 <!-- Submit Button -->
-                <div class="mt-6 text-center lg:w-1/3">
+                <div class="newsletter__button-wrapper">
                   <button
                     type="submit"
-                    class="px-6 py-2 bg-green-500 text-white text-sm font-medium rounded-md hover:bg-green-700 focus:ring-4 focus:ring-primary-base w-full"
+                    class="newsletter__button"
                   >
                     SUBSCRIBE
                   </button>
@@ -677,30 +677,30 @@
 
              <!-- Suggested -->
             
-                 <section class=" mx-auto pt-4 mt-6">
-                     <h2 class=" mb-6">Suggested Articles</h2>
-                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                 <section class=" suggested-articles__container">
+                     <h2 class=" suggested-articles__title">Suggested Articles</h2>
+                     <div class="suggested-articles__grid">
                          <!-- Article 1 -->
-                         <div class=" overflow-hidden">
-                             <img src="images/suggested-article.webp" alt="Article Image" class="w-full h-32 object-cover">
-                             <div class="py-4">
-                                 <h5 class=" mb-2">Insights From Microsoft Ads Partners: Copilot And PMax</h5>
+                         <div class="suggested-articles__item">
+                             <img src="images/suggested-article.webp" alt="Article Image" class="suggested-articles__image">
+                             <div class="suggested-articles__content">
+                                 <h5 class=" suggested-articles__headline">Insights From Microsoft Ads Partners: Copilot And PMax</h5>
                              </div>
                          </div>
              
                          <!-- Article 2 -->
-                         <div class="overflow-hidden">
-                             <img src="images/suggested-article.webp" alt="Article Image" class="w-full h-32 object-cover">
-                             <div class="py-4">
-                                 <h5 class="mb-2">Holiday SEO Pitfalls To Avoid: Common Mistakes And How To Fix Them</h5>
+                         <div class="suggested-articles__item">
+                             <img src="images/suggested-article.webp" alt="Article Image" class="suggested-articles__image">
+                             <div class="suggested-articles__content">
+                                 <h5 class="suggested-articles__headline">Holiday SEO Pitfalls To Avoid: Common Mistakes And How To Fix Them</h5>
                              </div>
                          </div>
              
                          <!-- Article 3 -->
-                         <div class="  overflow-hidden">
-                             <img src="images/suggested-article.webp" alt="Article Image" class="w-full h-32 object-cover">
-                             <div class="py-4">
-                                 <h5 class=" mb-2">What 7 SEO Experts Think About AI Overviews And Where Search Is Going</h5>
+                         <div class="  suggested-articles__item">
+                             <img src="images/suggested-article.webp" alt="Article Image" class="suggested-articles__image">
+                             <div class="suggested-articles__content">
+                                 <h5 class=" suggested-articles__headline">What 7 SEO Experts Think About AI Overviews And Where Search Is Going</h5>
                              </div>
                          </div>
                      </div>
@@ -710,49 +710,49 @@
             </div>
       
             <!-- Sidebar Section -->
-            <section class="w-full ">
-              <div class=" justify-center flex flex-col">
-              <div class="bg-[#F5F7F7] rounded-lg  p-6 max-w-md w-full text-center">
-                  <h2 lass="  mb-2">
-                    <span class="text-primary-dark">SE</span>
-                    <span class="text-primary-base -mx-2">J</span>
-                    <span class="text-primary-dark">Today</span>
+            <section class="subscription-section">
+              <div class=" subscription-section__container">
+              <div class="subscription-section__card">
+                  <h2 lass="  subscription-section__title inter-heading">
+                    <span class="subscription-section__title-dark ">SE</span>
+                    <span class="subscription-section__title-highlight">J</span>
+                    <span class="subscription-section__title-dark">Today</span>
                   </h2>
-                  <p class="text-2xl md:text-3xl  font-semibold text-primary-base">Join Our Newsletter.</p>
-                  <p class="text-primary-dark font-bold mb-6 text-2xl md:text-3xl l">Get your daily dose of search know-how.</p>
+                  <p class="subscription-section__subtitle inter-para">Join Our Newsletter.</p>
+                  <p class="subscription-section__description inter-para">Get your daily dose of search know-how.</p>
           
-                  <form class="space-y-10 mx-5">
+                  <form class="subscription-section__form">
                       <input 
                           type="email" 
                           placeholder="Email Address*" 
-                          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-base"
+                          class="subscription-section__input"
                           required
                       >
                       <button 
                           type="submit" 
-                          class=" w-2/3 bg-green-500 text-white font-bold py-2  hover:bg-green-600 focus:ring-2 focus:ring-primary-base"
+                          class=" subscription-section__button"
                       >
                           SUBSCRIBE
                       </button>
                   </form>
           
-                  <p class="text-xs md:text-sm text-gray-600 mt-4 leading-loose">
+                  <p class="subscription-section__disclaimer">
                       By clicking the "Subscribe" button, I agree and accept the 
-                      <a href="category-page.html" class="text-primary-base underline">privacy policy</a> of Search Engine Journal.
+                      <a href="category-page.html" class="subscription-section__link">privacy policy</a> of Search Engine Journal.
                   </p>
               </div>
 
               <div class="mt-4 lg:mt-8">
-                <div class="flex flex-col">
+                <div class="marketing-trends">
 
-                  <div class="w-full">
+                  <div class="marketing-trends__image-container">
   
-                    <img src="images/sidebarImage.webp" class="w-full " alt="">
+                    <img src="images/sidebarImage.webp" class="marketing-trends__image" alt="">
   
                   </div>
-                  <div class="py-4 bg-green-500 px-4">
+                  <div class="marketing-trends__content">
                       
-                    <h3 class="text-lg lg:text-2xl font-bold mt-2 text-white hover:underline">2025 Marketing trnds : End of SEO?</h3>
+                    <h3 class="marketing-trends__headline inter-head">2025 Marketing trnds : End of SEO?</h3>
                     
                 </div>
               </div>
