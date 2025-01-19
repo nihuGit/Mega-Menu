@@ -93,7 +93,7 @@
 
     /* Header Section */
       .author-card__header {
-        @apply flex flex-wrap justify-between;
+        @apply flex flex-row justify-between;
       }
 
     .author-card__author {
