@@ -319,73 +319,67 @@
       
       
       <section class="">
-        <div class="container__layout">
-          <!-- Main Content Section -->
-          <div class="container__grid">
+        <!-- BEM apply -->
+        <div class="page__layout">
+          <div class="page__grid">
             <div class="content__main">
-              <header class="header__section">
-                <h4 class=" text-primary-base ">SEJ · Tools</h4>
+              <header class="content__header">
+                <h4 class="content__header--primary">SEJ · Tools</h4>
               </header>
               <div class="content__section">
-                <h1 class="content__header-title inter-head">Google Retires Web Vitals Extension, Moves Everything to DevTools</h1>
-                <p class="content__paragraph inter-para">Google retires Web Vitals extension, integrates Core Web Vitals monitoring into DevTools' Performance panel</p>
+                <h1 class="content__title">Google Retires Web Vitals Extension, Moves Everything to DevTools</h1>
+                <p class="content__paragraph">Google retires Web Vitals extension, integrates Core Web Vitals monitoring into DevTools' Performance panel.</p>
               </div>
-              <div class="mt-6">
-                <hr>
-                <!-- Highlights fixing required -->
-                <div class=" highlights__container">
-                  <h2 class="highlights__heading">Highlights</h2>
-                  <ul class="highlights__list">
-                    <li class="highlights__item">
-                      <span class="highlights__bullet"></span>
-                      <p class="highlights__text inter-para">Google refuses to implement EU-mandated fact-checking on its platforms.</p>
-                    </li>
-                    <li class="highlights__item">
-                      <span class="highlights__bullet"></span>
-                      <p class="highlights__text inter-para">Google claims its current moderation tools are already effective enough.</p>
-                    </li>
-                    <li class="highlights__item">
-                      <span class="highlights__bullet"></span>
-                      <p class="highlights__text inter-para">The decision challenges new EU Digital Services Act requirements.</p>
-                    </li>
-                  </ul>
-                </div>
+              <div class="content__highlights">
+                <h2 class="content__highlights-title">Highlights</h2>
+                <ul class="content__highlights-list">
+                  <li class="content__highlights-item">
+                    <span class="content__highlights-bullet"></span>
+                    <p class="content__highlights-text">Google refuses to implement EU-mandated fact-checking on its platforms.</p>
+                  </li>
+                  <li class="content__highlights-item">
+                    <span class="content__highlights-bullet"></span>
+                    <p class="content__highlights-text">Google claims its current moderation tools are already effective enough.</p>
+                  </li>
+                  <li class="content__highlights-item">
+                    <span class="content__highlights-bullet"></span>
+                    <p class="content__highlights-text">The decision challenges new EU Digital Services Act requirements.</p>
+                  </li>
+                </ul>
+        
                 
               </div>
               
                 <hr>
-              <div class="author-card">
-                <div class="author-card__header">
-                <div class="author-card__author">
-                  <div class="">
-                    <img src="https://github.com/shadcn.png" alt="Author Image" class="author-card__author-image">
-                  </div>
-                    <div class="author-card__author-info">
+                <div class="author-card">
+                  <div class="author-card__header">
+                    <div class="author-card__author">
+                      <div class="author-card__author-image-container">
+                        <img src="https://github.com/shadcn.png" alt="Author Image" class="author-card__author-image">
+                      </div>
+                      <div class="author-card__author-info">
                         <p class="author-card__author-role inter-para">SEJ STAFF</p>
-                        <h5 class="inter-head ">Matt G. Southern</h5>
+                        <h5 class="author-card__author-name inter-head">Matt G. Southern</h5>
                         <div class="author-card__meta">
-                        <p class="author-card__read-time inter-para">January 14, 2025- </p>
-                        <p class="author-card__read-time inter-para "> 2 min read</p>
+                          <p class="author-card__meta--time inter-para">January 14, 2025 -</p>
+                          <p class="author-card__meta--time inter-para">2 min read</p>
+                        </div>
                       </div>
                     </div>
-                </div>
-        
-                <!-- Stats Section -->
-                <div class="author-card__stats">
-                    <div>
+                    <div class="author-card__stats">
+                      <div>
                         <p class="author-card__stats-item">73</p>
-                        <p class="author-card__dark-stats-item">SHARES</p>
-                    </div>
-                    <div>
+                        <p class="author-card__stats-item--dark">SHARES</p>
+                      </div>
+                      <div>
                         <p class="author-card__stats-item">8.5K</p>
-                        <p class="author-card__dark-stats-item">READS</p>
+                        <p class="author-card__stats-item--dark">READS</p>
+                      </div>
                     </div>
-                </div>
-              </div>
-                <!-- Image Section -->
-                <div class="author-card__image-container">
+                  </div>
+                  <div class="author-card__image-container">
                     <img src="images/author-image-01.webp" alt="Keyboard and Tools" class="author-card__main-image">
-                </div>
+                  </div>
         
                 <!-- Content Section -->
                 
@@ -754,6 +748,30 @@
                       
                     <h3 class="marketing-trends__headline inter-head">2025 Marketing trnds : End of SEO?</h3>
                     
+                </div>
+              </div>
+
+              <div class="flex items-center justify-center my-4 lg:my-8 px-6 lg:py-10 bg-neutral-background">
+                <div class="w-full  py-4 bg-transparent ">
+                  <form class="flex flex-col gap-4">
+                    <!-- Search Input -->
+                    <div class="relative">
+                      <input
+                        type="text"
+                        placeholder="&#x1F50D;"
+                        class="w-full px-4 py-3 text-sm border rounded focus:outline-none focus:ring-2 focus:ring-primary-base"
+                      />
+                      
+                    </div>
+              
+                    <!-- Submit Button -->
+                    <button
+                      type="submit"
+                      class="w-full px-4 py-3 text-sm font-semibold text-white bg-primary-base rounded hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                    >
+                      SEARCH
+                    </button>
+                  </form>
                 </div>
               </div>
               

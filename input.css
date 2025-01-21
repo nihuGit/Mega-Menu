@@ -6,21 +6,39 @@
 
 
 @layer base {
-    h1 {
-        @apply text-4xl lg:text-5xl font-bold;
-    }
-    h2 {
-        @apply text-3xl lg:text-4xl font-bold;
-    }
+  h1 {
+    @apply text-4xl lg:text-5xl font-bold;
+}
+h2 {
+    @apply text-3xl lg:text-4xl font-bold;
+}
     h3 {
         @apply text-2xl lg:text-3xl font-bold;
     }
     h4 {
-        @apply text-xl lg:text-2xl font-bold;
-    }
+      @apply text-xl lg:text-2xl font-bold;
+  }
+  
     h5 {
         @apply text-base lg:text-lg font-semibold;
     }
+    .content__header--primary {
+      @apply text-primary-base;
+  }
+  .content__title {
+    @apply font-semibold not-italic text-4xl lg:text-5xl mb-6;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+}
+.content__paragraph,
+.content__highlights-text {
+    @apply font-normal not-italic text-lg text-neutral-subtext;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+}
+
+
+/* Not BEM */
     .inter-head {
         @apply font-semibold not-italic;
         font-family: "Inter", serif;
@@ -36,9 +54,93 @@
         font-family: "Lora", serif;
         font-optical-sizing: auto;
       }
+      /*  */
 }
 
 @layer utilities {
+
+  /* BEM apply */
+  .page__layout {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
+}
+.page__grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+/* Content Section */
+.content__main {
+    @apply md:col-span-2 px-4 lg:px-6;
+}
+.content__header {
+    @apply mb-12 mt-3;
+}
+.content__section {
+    @apply space-y-6;
+}
+
+/* Highlights Section */
+.content__highlights {
+    @apply my-4 lg:my-6 px-4 py-6 lg:py-8;
+}
+.content__highlights-title {
+    @apply mb-4 lg:mb-6 text-3xl lg:text-4xl font-bold;
+}
+.content__highlights-list {
+    @apply space-y-2;
+}
+.content__highlights-item {
+    @apply flex items-start;
+}
+.content__highlights-bullet {
+    @apply w-2 h-2 mt-2 bg-primary-base rounded-full mr-4;
+}
+
+.author-card {
+  @apply p-4 mt-6 lg:mt-8;
+}
+.author-card__header {
+  @apply flex flex-row justify-between;
+}
+.author-card__author {
+  @apply flex items-center space-x-4;
+}
+.author-card__author-image-container {
+  @apply flex-shrink-0;
+}
+.author-card__author-image {
+  @apply w-12 md:w-14 h-12 md:h-16 rounded-full;
+}
+.author-card__author-info {
+  @apply space-y-1 lg:space-y-0;
+}
+.author-card__author-role {
+  @apply text-primary-base font-semibold text-xs;
+}
+.author-card__author-name {
+  @apply text-base md:text-xl lg:text-2xl font-bold;
+}
+.author-card__meta {
+  @apply flex flex-col lg:flex-row font-semibold;
+}
+.author-card__meta--time {
+  @apply text-xs md:text-base text-neutral-subtext;
+}
+.author-card__stats {
+  @apply flex justify-end space-x-8 mt-4 text-right;
+}
+.author-card__stats-item {
+  @apply text-primary-base text-xl lg:text-2xl font-bold;
+}
+.author-card__stats-item--dark {
+  @apply text-primary-dark font-semibold text-sm;
+}
+.author-card__image-container {
+  @apply mt-6;
+}
+.author-card__main-image {
+  @apply w-full lg:rounded-lg;
+}
+  /* BEM apply */
 
     .container__layout {
         @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
@@ -87,72 +189,7 @@
         @apply text-lg ;
       }
       /* Author Card Block */
-      .author-card {
-        @apply p-4 mt-6 lg:mt-8;
-      }
-
-    /* Header Section */
-      .author-card__header {
-        @apply flex flex-row justify-between;
-      }
-
-    .author-card__author {
-      @apply flex items-center space-x-4;
-    }
-
-    .author-card__author-image {
-      @apply w-12 md:w-14 h-12 md:h-16 rounded-full;
-    }
-
-    .author-card__author-info {
-      @apply space-y-1 lg:space-y-0;
-    }
-
-    .author-card__author-role {
-      @apply text-primary-base font-semibold text-xs;
-    }
-
-    .author-card__author-name {
-      @apply text-base md:text-xl lg:text-2xl font-bold;
-    }
-
-    .author-card__meta {
-      @apply flex flex-col lg:flex-row font-semibold;
-    }
-
-    
-    .author-card__read-time {
-      @apply text-xs md:text-base  text-neutral-subtext;
-    }
-
-    /* Stats Section */
-    .author-card__stats {
-      @apply flex justify-end space-x-8 mt-4 text-right;
-    }
-
-  
-    .author-card__stats-item {
-      @apply text-primary-base text-xl lg:text-2xl font-bold;
-    }
-
-    /* .author-card__share-count,
-    .author-card__read-count {
-      @apply text-primary-base text-xl lg:text-2xl font-bold;
-    } */
-
-    .author-card__dark-stats-item {
-      @apply text-primary-dark font-semibold text-sm;
-    }
-
-    /* Image Section */
-    .author-card__image-container {
-      @apply mt-6;
-    }
-
-    .author-card__main-image {
-      @apply w-full lg:rounded-lg;
-    }
-
+ 
         /* Webinar Card Block */
     .webinar-card {
       @apply mt-10 sm:mx-auto;
@@ -539,7 +576,7 @@
 
 /* Links inside the description */
 .category-section__link {
-  @apply text-primary-base underline;
+  @apply text-primary-base underline cursor-pointer;
 }
 
 /* Additional content container */
