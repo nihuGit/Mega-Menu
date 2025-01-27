@@ -18,9 +18,15 @@ module.exports = {
           card: "#F3F4F6", // Card background color          
           footer: "#E5E7EB", // Footer background         
           border: "#D1D5DB", // Input border color        
+          borderDark: "#3f036aed", // Input border color        
           placeholder: "#9CA3AF", // Placeholder text color          
           text: "#1F2937", // Main text color   
           subtext: "#4B5563", // Secondary text color
+          promoButton: '#EE5921', 
+          promoborder: '#f9b17b ', 
+          promoBack: '#fdebdd', 
+          BigCardBack: '#97a1b0', 
+          BigCardViolet: '#6317a9', 
 
         },
       },
@@ -32,6 +38,10 @@ module.exports = {
       },
       boxShadow: {
         inner: "inset 0 2px 4px rgba(0, 0, 0, 0.06)", // Shadow for the inner card area
+      },
+      screens: {
+        'xl': '1280px',
+        '2xl': '1536px',
       },
     },
   },
