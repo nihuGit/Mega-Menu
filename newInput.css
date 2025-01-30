@@ -59,57 +59,109 @@ h2 {
 
 @layer utilities{
     
-  /* Sidebar Dropdown */
-  .sidebar__dropdown-button {
-    @apply bg-white border border-gray-300 rounded-lg text-left py-2 px-4 flex justify-between items-center text-gray-700;
+/* Block: dropdown */
+.section-category { 
+  @apply max-w-7xl mx-auto  lg:px-8 py-6 ; 
+}
+.section-category__container {
+   @apply flex flex-col lg:flex-row relative ; 
   }
 
-  .sidebar__dropdown-menu {
-    @apply absolute container mt-2 hidden bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-300 ease-in-out origin-top transform scale-y-0;
+.sidebar-category {
+   @apply w-full px-6 py-3  lg:w-1/4 ; 
+  }
+.sidebar-category--bg {
+   @apply  bg-neutral-footer lg:bg-transparent; 
+  }
+  .dropdown__button {
+    @apply w-full text-left flex justify-between items-center py-2 px-4 rounded-lg border text-primary-dark;
   }
 
-  .sidebar__dropdown-item {
-    @apply block px-4 py-2 text-gray-700 hover:text-blue-600;
+  .dropdown__button--primary {
+    @apply bg-white border-gray-300;
   }
 
-  /* Sidebar Links */
-  .sidebar__link {
-    @apply block text-primary-dark hover:bg-primary-base px-6 py-4;
+  .dropdown__text {
+    @apply flex-1;
   }
 
-  /* Card */
-  .card {
-    @apply col-span-12 sm:col-span-6 lg:col-span-4 rounded-md shadow-md overflow-hidden;
+  .dropdown__icon {
+    @apply ml-2;
   }
 
-  .card__image {
-    @apply w-full h-40 object-cover;
+/* Dropdown for Mobile */
+.sidebar-category__dropdown {
+   @apply block lg:hidden  relative; 
+  }
+.sidebar-category__title--center {
+   @apply text-center my-5; 
+  }
+  .dropdown__menu {
+    @apply absolute container mt-2 hidden  border  rounded-lg shadow-lg z-50 transition-all duration-300 ease-in-out origin-top transform scale-y-0 max-h-[300px] overflow-y-auto p-3;
+    
   }
 
-  .card__content {
-    @apply p-4;
+  .dropdown__menu--color {
+    @apply bg-primary-light border-neutral-border;
   }
 
-  .card__title {
-    @apply mb-2 font-semibold text-primary-dark;
+  .dropdown__link {
+    @apply  block px-4 py-2 text-gray-700 hover:text-blue-600;
   }
 
-  .card__date {
-    @apply text-sm text-gray-500;
+/* Sidebar List for Larger Screens */
+.sidebar-container {
+  @apply rounded-lg hidden lg:block bg-neutral-footer  py-3 ;
+  }
+.sidebar-container__list {
+   @apply w-full ;
+   }
+.sidebar-container__list-item {
+   @apply block  px-6 py-4 inter-para; 
+  }
+.sidebar-container__list-item--color {
+   @apply  text-primary-dark hover:bg-primary-base ; 
   }
 
-  /* Main Header */
-  .main-header {
-    @apply flex justify-between items-center mb-4 border-b pb-4 border-neutral-border my-5;
+/* Main Content */
+.main-card {
+   @apply flex-1 px-4; 
+  }
+.main-card__header {
+   @apply flex justify-between items-center mb-4 border-b pb-4 border-neutral-border my-5 ; 
+  }
+.main-card__title--primary { 
+  @apply text-primary-dark inter-head; 
+}
+.main-card__paragraph {
+   @apply text-neutral-subtext text-sm xl:text-base hover:underline; 
   }
 
-  .main-header__title {
-    @apply font-semibold text-primary-dark;
-  }
+/* Card Grid */
+.card-grid {
+   @apply grid grid-cols-12 gap-6;
+   }
 
-  .main-header__link {
-    @apply text-neutral-subtext text-sm xl:text-base hover:underline;
+/* Card */
+.card-grid__card {
+   @apply col-span-12 sm:col-span-6 lg:col-span-4 rounded-md shadow-sm overflow-hidden; 
   }
+.card-grid__image {
+   @apply w-full h-40 object-cover; 
+  }
+.card-grid__content {
+   @apply p-4; 
+  }
+.card-grid__title {
+   @apply mb-2 inter-head; 
+  }
+.card-grid__date {
+   @apply text-sm text-gray-500 inter-para;
+   }
+
+
+
+
 
 /* News */
 .news-section {
@@ -179,15 +231,15 @@ h2 {
 }
 
 .promo-card__title {
-  @apply  mb-3 lora-para text-center lg:text-left ;
+  @apply  mb-3 inter-head text-center lg:text-left ;
 }
 
 .promo-card__description {
-  @apply text-neutral-subtext text-sm mb-6 lora-para text-center lg:text-left ;
+  @apply text-neutral-subtext text-sm mb-6 inter-para text-center lg:text-left ;
 }
 
 .promo-card__button {
-  @apply bg-neutral-promoButton text-center  text-white text-sm font-normal px-6 py-3 rounded-md hover:bg-orange-600 transition lora-para;
+  @apply bg-neutral-promoButton text-center  text-white text-sm font-normal px-6 py-3 rounded-md hover:bg-orange-600 transition inter-para;
 }
 
 /* Latest Articles Section */
@@ -231,83 +283,72 @@ h2 {
 }
 
 /* Button Group */
-.button-group {
-  @apply overflow-x-auto;
+
+
+
+
+/* Main Section */
+.article-section {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8
 }
 
-.button-group__button {
-  @apply flex flex-col items-center focus:outline-none  min-w-[240px] space-y-3 px-3;
+/* Grid Layout */
+.article-section__grid {
+  @apply grid grid-cols-12 gap-6;
 }
 
-.button-group__button--active i {
-  @apply text-neutral-BigCardViolet;
+/* Main Article */
+.article {
+  @apply col-span-12 lg:col-span-6   overflow-hidden;
+}
+.article__image {
+  @apply w-full h-auto;
+}
+.article__content {
+  @apply p-6;
+}
+.article__title {
+  @apply text-xl lg:text-2xl font-bold mb-4 text-center;
+}
+.article__author {
+  @apply text-primary-base font-medium mb-4 text-center;
+}
+.article__description {
+  @apply text-primary-dark text-center;
 }
 
-.button-group__button i {
-  @apply text-3xl text-neutral-BigCardBack;
+/* Sidebar */
+.sidebar {
+  @apply col-span-12 lg:col-span-6 border-l border-neutral-border px-4;
+}
+.sidebar__tabs {
+  @apply flex border-b;
+}
+.sidebar__tab {
+  @apply flex-1 py-2 text-center font-medium;
+}
+.sidebar__tab--active {
+  @apply border-b-2 border-primary-base;
 }
 
-.button-group__button--active span {
-  @apply font-normal text-base tracking-wide text-neutral-BigCardViolet;
+/* Articles List */
+.articles-list {
+  @apply p-4;
+}
+.articles-list__item {
+  @apply mb-6;
+}
+.articles-list__category {
+  @apply text-primary-base uppercase text-xs md:text-sm;
+}
+.articles-list__title {
+  @apply font-bold text-base md:text-lg;
+}
+.articles-list__meta {
+  @apply text-xs md:text-sm text-neutral-subtext;
 }
 
-.button-group__button span {
-  @apply font-normal text-base tracking-wide;
-}
 
-.button-group__indicator {
-  @apply w-full h-1 rounded-md mt-1;
-}
-
-.button-group__indicator--active {
-  @apply bg-neutral-BigCardViolet;
-}
-
-.button-group__indicator {
-  @apply bg-neutral-background;
-}
-
-/* Section Content */
-.section-content {
-  @apply mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center;
-}
-
-.section-content__left {
-  @apply mb-8;
-}
-
-.section-content__heading {
-  @apply text-primary-dark leading-snug inter-head;
-}
-
-.section-content__list {
-  @apply mt-6 space-y-4 text-neutral-subtext inter-para tracking-wide;
-}
-
-.section-content__list-item {
-  @apply flex items-start space-x-2 text-base;
-}
-
-.section-content__icon {
-  @apply text-primary-base;
-}
-
-.section-content__button {
-  @apply mt-8 px-6 py-3 bg-primary-base text-white font-medium text-lg rounded-md shadow-md hover:bg-primary-hover focus:outline-none;
-}
-
-/* Image Container */
-.image-container {
-  @apply relative flex justify-center items-center mt-10 lg:mt-0;
-}
-
-.image-container__large {
-  @apply absolute w-96 h-80 bg-white shadow-lg rounded-lg overflow-hidden;
-}
-
-.image-container__small {
-  @apply relative w-64 h-52 bg-white shadow-lg rounded-lg overflow-hidden transform translate-x-20 translate-y-24;
-}
 
 
 }

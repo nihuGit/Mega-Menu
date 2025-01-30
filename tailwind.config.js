@@ -9,6 +9,7 @@ module.exports = {
           base: "#16A34A", // Main green color used for headings and buttons
           hover: "#15803D", // Darker green for hover states
           dark: "#000", // black color
+          light: "#fffff", // black color
         },
         accent: {
           light: "#FEF9C3", // Soft yellow for the webinar section
