@@ -285,68 +285,193 @@ h2 {
 /* Button Group */
 
 
-
-
-/* Main Section */
-.article-section {
-  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8
+/*  */
+/* Block container */
+.seo-section {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-8 lg:py-10;
 }
 
-/* Grid Layout */
-.article-section__grid {
+/* Inner container with border and shadow */
+.seo-section__container {
+  @apply px-4 sm:px-6 lg:px-16 py-8 lg:py-10 rounded-xl lg:border lg:border-neutral-footer lg:shadow-xl;
+}
+
+/* Button Group wrapper for horizontal scroll */
+.seo-section__button-group-wrapper {
+  @apply overflow-x-auto;
+}
+
+/* Button group container */
+.seo-section__button-group {
+  @apply flex space-x-4 py-3 w-max lg:w-full;
+}
+
+/* Base style for each tab button */
+.seo-section__tab {
+  @apply flex flex-col items-center focus:outline-none w-60 xl:w-1/6 space-y-3 px-3;
+}
+
+/* Base styles for icon, text, and underline */
+.seo-section__tab-icon {
+  @apply text-3xl text-neutral-BigCardBack;
+}
+.seo-section__tab-text {
+  @apply font-normal text-base tracking-wide text-neutral-text;
+}
+.seo-section__tab-underline {
+  @apply w-full h-1 rounded-md bg-neutral-background mt-1;
+}
+
+/* Active state overrides for icon, text, and underline */
+.seo-section__tab-icon-active {
+  @apply text-neutral-BigCardViolet;
+}
+.seo-section__tab-text-active {
+  @apply text-neutral-BigCardViolet;
+}
+.seo-section__tab-underline-active {
+  @apply bg-neutral-BigCardViolet;
+}
+
+
+
+/* Content grid for the section */
+.seo-section__content {
+  @apply mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-10 py-10 lg:mb-0 lg:py-0;
+}
+
+/* Left side content container */
+.seo-section__content-left {
+  @apply mb-8;
+}
+
+/* Main title */
+.seo-section__title {
+  @apply text-primary-dark leading-snug inter-head;
+}
+
+/* Ordered list container */
+.seo-section__list {
+  @apply mt-6 space-y-4 text-neutral-subtext inter-para tracking-wide;
+}
+
+/* List item */
+.seo-section__list-item {
+  @apply flex items-start space-x-2 text-base;
+}
+
+/* Icon in each list item */
+.seo-section__list-icon {
+  @apply text-primary-base;
+}
+
+/* Action button (e.g., Try SEO Toolkit) */
+.seo-section__button {
+  @apply mt-8 px-6 py-3 bg-primary-base text-white font-medium text-lg rounded-md shadow-md hover:bg-primary-hover focus:outline-none;
+}
+
+/* Right side content container */
+.seo-section__content-right {
+  @apply relative flex justify-center items-center mt-10 lg:mt-0;
+}
+
+/* First image container */
+.seo-section__image-container {
+  @apply absolute w-96 h-80 bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+/* Image styling */
+.seo-section__image {
+  @apply w-full h-full object-cover shadow-lg rounded-lg;
+}
+
+/* Second image container with transform */
+.seo-section__image-second-container {
+  @apply relative w-64 h-52 bg-white shadow-lg rounded-lg overflow-hidden transform translate-x-20 translate-y-24;
+}
+
+/* Second image styling */
+.seo-section__image-second {
+  @apply w-full h-full object-cover;
+}
+
+
+/* Block container */
+.updates-section {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+/* Grid container */
+.updates-section__grid {
   @apply grid grid-cols-12 gap-6;
 }
 
 /* Main Article */
-.article {
-  @apply col-span-12 lg:col-span-6   overflow-hidden;
+.updates-section__main {
+  @apply col-span-12 lg:col-span-6 overflow-hidden;
 }
-.article__image {
+
+.updates-section__main-image {
   @apply w-full h-auto;
 }
-.article__content {
+
+.updates-section__main-content {
   @apply p-6;
 }
-.article__title {
-  @apply text-xl lg:text-2xl font-bold mb-4 text-center;
+
+.updates-section__main-title {
+  @apply text-xl lg:text-2xl font-bold mb-4 text-center inter-para;
 }
-.article__author {
-  @apply text-primary-base font-medium mb-4 text-center;
+
+.updates-section__author {
+  @apply text-primary-base font-medium mb-4 text-center inter-para;
 }
-.article__description {
-  @apply text-primary-dark text-center;
+
+.updates-section__description {
+  @apply text-primary-dark text-center inter-para;
 }
 
 /* Sidebar */
-.sidebar {
+.updates-section__sidebar {
   @apply col-span-12 lg:col-span-6 border-l border-neutral-border px-4;
 }
-.sidebar__tabs {
+
+/* Tabs in Sidebar */
+.updates-section__tabs {
   @apply flex border-b;
 }
-.sidebar__tab {
-  @apply flex-1 py-2 text-center font-medium;
+
+.updates-section__tab-button {
+  @apply flex-1 py-2 text-center font-medium inter-para;
 }
-.sidebar__tab--active {
+
+/* Active tab modifier */
+.updates-section__tab-button--active {
   @apply border-b-2 border-primary-base;
 }
 
-/* Articles List */
-.articles-list {
+/* Articles List in Sidebar */
+.updates-section__articles-list {
   @apply p-4;
 }
-.articles-list__item {
+
+/* Individual Article in the Sidebar */
+.updates-section__article {
   @apply mb-6;
 }
-.articles-list__category {
-  @apply text-primary-base uppercase text-xs md:text-sm;
+
+.updates-section__article-category {
+  @apply text-primary-base uppercase text-xs md:text-sm inter-para;
 }
-.articles-list__title {
-  @apply font-bold text-base md:text-lg;
+
+.updates-section__article-title {
+  @apply inter-head;
 }
-.articles-list__meta {
-  @apply text-xs md:text-sm text-neutral-subtext;
+
+.updates-section__article-meta {
+  @apply text-xs md:text-sm text-neutral-subtext inter-para;
 }
+
 
 
 
