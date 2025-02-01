@@ -372,7 +372,7 @@ h2 {
 
 /* Right side content container */
 .seo-section__content-right {
-  @apply relative flex justify-center items-center mt-10 lg:mt-0;
+  @apply relative flex justify-center items-center mt-10 lg:mt-0 px-4 lg:px-0;
 }
 
 /* First image container */
