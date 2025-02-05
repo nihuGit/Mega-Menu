@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="nav-styles.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="indexStyle.css">
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
  
@@ -19,13 +19,13 @@
 
     <main class = "main-wrapper">
       <nav class = "navbar">
-        <div class = "brand-and-icon flex items-center  w-full">
-          <div class="flex items-center space-x-3">
+        <div class = "brand-and-icon ">
+          <div class="brand-and-icon__container space-x-3">
           <button type = "button" class = "navbar-toggler">
             <i class = "fas fa-bars"></i>
           </button>
-          <a href = "index.html" class = "navbar-brand font-bold flex w-fit">
-            <span class="text-black w-fit flex">Search</span>
+          <a href = "index.html" class = "navbar-brand ">
+            <span class="text-primary-dark navbar-brand__span">Search</span>
             <span class="text-primary-base">Journal</span>
           </a>
         </div>
@@ -36,9 +36,9 @@
         </div>
 
         <div class = "navbar-collapse">
-          <div class = "brand-and-icon flex justify-between items-center w-full lg:hidden ">
-            <a href = "index.html" class = "navbar-brand font-bold flex w-fit">
-              <span class="text-black w-fit flex">Search</span>
+          <div class = "brand-and-icon brand-and-icon__collapse lg:hidden ">
+            <a href = "index.html" class = "navbar-brand ">
+              <span class="text-black navbar-brand__span">Search</span>
               <span class="text-primary-base">Journal</span>
             </a>
             <button type="button" class="close-btn lg:hidden">
@@ -46,26 +46,26 @@
           </button>
           </div>
 
-          <form method="GET" action="" class=" my-6 lg:hidden">
-            <div class="bg-white border-2  px-2 py-2 relative flex">
-              <span class="w-auto flex justify-end  items-center text-gray-500 p-2">
+          <form method="GET" action="" class=" form ">
+            <div class="form__container">
+              <span class="form__container__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
               </span>
-              <input name="episodequery" id="title" class="border-white outline-none border-0 w-full rounded-xl pl-5" type="text" placeholder="What are you looking for?" />
+              <input name="episodequery" id="title" class="form__container__input" type="text" placeholder="What are you looking for?" />
               
             </div>
-            <button type = "button" class = "sej-sbs-btn lg:hidden navbar-search-space">
+            <button type = "button" class = "sej-sbs-btn  navbar-search-space">
               <i class="fa-solid fa-envelope "></i>
-              <span class="px-1 font-bold">Subscribe</span>
+              <span class="form__container--btn">Subscribe</span>
             </button>
           </form>
           
           <ul class = "navbar-nav ">
 
             <li>
-              <a href = "#" class = "menu-link">
+              <a href = "" class = "menu-link">
                 Latest
                 <span class = "drop-icon">
                   <i class = "fas fa-chevron-down"></i>
@@ -78,11 +78,11 @@
                 <div class = "sub-menu-item">
                   
                   <ul>
-                    <li><a href = "#">cell phones & accessories</a></li>
-                    <li><a href = "#">smart tv</a></li>
-                    <li><a href = "#">computer & laptops</a></li>
-                    <li><a href = "#">digital cameras</a></li>
-                    <li><a href = "#">video games & accessories</a></li>
+                    <li><a href = "category-page.html">cell phones & accessories</a></li>
+                    <li><a href = "category-page.html">smart tv</a></li>
+                    <li><a href = "category-page.html">computer & laptops</a></li>
+                    <li><a href = "category-page.html">digital cameras</a></li>
+                    <li><a href = "category-page.html">video games & accessories</a></li>
                   </ul>
                 </div>
                 <!-- end of item -->
