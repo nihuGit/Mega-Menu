@@ -38,13 +38,33 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 0.6rem 0;
+    align-items: center;
+    width: 100%;
+    /* border-bottom: 1px solid #ddd; */
+}
+.brand-and-icon__container{
+    display: flex;
+    align-items: center;
     /* border-bottom: 1px solid #ddd; */
 }
 .navbar-brand{
+    display: flex;
+    width: fit-content;
     font-size: 1.25rem;
     /* line-height: 1.75rem; */
     letter-spacing: 1px;
     font-weight: 700;
+}
+.navbar-brand__span{
+    display: flex;
+    width: fit-content;
+}
+.brand-and-icon__collapse{
+    /* flex justify-between items-center w-full lg:hidden */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 .navbar-toggler{
     display: block;
@@ -105,7 +125,11 @@ body{
     z-index: 1000; 
     margin-bottom: 5px;
 }
-
+.form__container--btn{
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-weight: 700;
+}
 .navbar-nav > li > a{
     /* font-size: 1.5rem; */
     font-size: 1.2rem;
@@ -119,7 +143,35 @@ body{
     padding-left: 20px;
     padding-right: 20px;
 }
+.form{
+   
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.form__container{
+    background: #fff;
+    border: 2px solid #ddd;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.form__container__icon{
+    width: auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.form__container__input{
+    border: none;
+    width: full;
+    padding-left:1.25rem ;
 
+}
 .drop-icon{
     position: absolute;
     right: 10px;
@@ -291,6 +343,10 @@ body{
     .drop-icon{
         display: none;
     }
+    .form{
+        display: none;
+    }
+    
     .sub-menu{
         position: absolute;
         left: 0;
@@ -326,6 +382,9 @@ body{
     }
     .sub-menu-item:nth-child(4){
         display: block;
+    }
+    .sej-sbs-btn{
+        display: none;
     }
 
     /* header */
