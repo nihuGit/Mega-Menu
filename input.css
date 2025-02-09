@@ -472,7 +472,7 @@ h2 {
 }
 
 .subscription-section__card {
-  @apply bg-[#F5F7F7] rounded-2xl px-6 py-8 max-w-md w-full text-center;
+  @apply bg-[#F5F7F7] rounded-2xl px-6 py-8 max-w-md w-full text-center mx-auto;
 }
 
 .subscription-section__title {
@@ -606,17 +606,17 @@ h2 {
 
 /* Content wrapper */
 .category-cards__content {
-  @apply py-4;
+  @apply py-4 space-y-4;
 }
 
 /* Title of the card */
-.category-cards__title {
-  @apply mt-2;
-}
+/* .category-cards__title {
+  @apply ;
+} */
 
 /* Author container */
 .category-cards__author {
-  @apply flex items-center space-x-3 mt-2;
+  @apply flex items-center space-x-3 ;
 }
 
 /* Author name */
@@ -626,7 +626,7 @@ h2 {
 
 /* Card description */
 .category-cards__description {
-  @apply text-sm md:text-base text-primary-dark font-normal mt-4;
+  @apply text-sm md:text-base text-primary-dark font-normal  leading-relaxed ;
 }
 
 /* Metadata (time, views, date) */
@@ -678,7 +678,7 @@ h2 {
 
 /* Category: Subscription Content */
 .subscription-category__content {
-  @apply flex flex-col lg:flex-row items-start lg:space-x-6;
+  @apply flex flex-col justify-center lg:flex-row items-start lg:space-x-6;
 }
 
 /* Category: Left Section */

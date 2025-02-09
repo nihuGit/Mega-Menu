@@ -2257,6 +2257,8 @@ h5 {
 }
 
 .subscription-section__card {
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 28rem;
   border-radius: 1rem;
@@ -2610,6 +2612,12 @@ h5 {
 
 /* Content wrapper */
 
+.category-cards__content > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .category-cards__content {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2617,14 +2625,13 @@ h5 {
 
 /* Title of the card */
 
-.category-cards__title {
-  margin-top: 0.5rem;
-}
+/* .category-cards__title {
+  @apply ;
+} */
 
 /* Author container */
 
 .category-cards__author {
-  margin-top: 0.5rem;
   display: flex;
   align-items: center;
 }
@@ -2648,10 +2655,10 @@ h5 {
 /* Card description */
 
 .category-cards__description {
-  margin-top: 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
+  line-height: 1.625;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
@@ -2810,6 +2817,7 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {

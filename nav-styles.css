@@ -59,6 +59,7 @@ body{
     display: flex;
     width: fit-content;
 }
+
 .brand-and-icon__collapse{
     /* flex justify-between items-center w-full lg:hidden */
     display: flex;
@@ -89,6 +90,12 @@ body{
     padding: 0.4rem 0.8rem;
     transition: all 0.4s ease;
     border-radius: 4px;
+}
+.sej-sbs-btn__text{
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-weight: 700;
+    display: none;
 }
 .navbar-collapse{
     position: fixed;
@@ -129,6 +136,10 @@ body{
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     font-weight: 700;
+    
+}
+.form__container--hidden{
+    display: none;
 }
 .navbar-nav > li > a{
     /* font-size: 1.5rem; */
@@ -168,8 +179,13 @@ body{
 }
 .form__container__input{
     border: none;
-    width: full;
+    width: 100%;
     padding-left:1.25rem ;
+    
+
+}
+.form__container__input:focus{
+    outline: none;
 
 }
 .drop-icon{
@@ -215,6 +231,10 @@ body{
 
 .sub-menu-item{
     padding-left: 0rem;
+}
+.sub-menu-item > ul >li{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 .sub-menu-item:nth-child(3){
 
@@ -433,6 +453,11 @@ body{
         cursor: pointer;
         color: #333;
       }
+}
+@media screen and (min-width: 425px){
+    .sej-sbs-btn__text{
+        display: inline;
+    }
 }
 
 @media screen and (min-width: 1100px){
