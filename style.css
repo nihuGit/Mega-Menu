@@ -723,10 +723,6 @@ h5 {
   z-index: 50;
 }
 
-.col-span-12 {
-  grid-column: span 12 / span 12;
-}
-
 .-mx-2 {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -799,10 +795,6 @@ h5 {
   height: 1.5rem;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .w-6 {
   width: 1.5rem;
 }
@@ -820,20 +812,12 @@ h5 {
   width: 100%;
 }
 
-.max-w-5xl {
-  max-width: 64rem;
-}
-
 .max-w-7xl {
   max-width: 80rem;
 }
 
 .max-w-md {
   max-width: 28rem;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
 }
 
 .flex-shrink-0 {
@@ -876,10 +860,6 @@ h5 {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -934,10 +914,6 @@ h5 {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -962,18 +938,6 @@ h5 {
   border-width: 2px;
 }
 
-.border-b {
-  border-bottom-width: 1px;
-}
-
-.border-b-2 {
-  border-bottom-width: 2px;
-}
-
-.border-l {
-  border-left-width: 1px;
-}
-
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
@@ -982,11 +946,6 @@ h5 {
 .border-neutral-border {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
-}
-
-.border-primary-base {
-  --tw-border-opacity: 1;
-  border-color: rgb(22 163 74 / var(--tw-border-opacity, 1));
 }
 
 .border-white {
@@ -1084,21 +1043,12 @@ h5 {
   padding-bottom: 1rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pl-5 {
   padding-left: 1.25rem;
 }
 
 .pr-2 {
   padding-right: 0.5rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .text-2xl {
@@ -1172,11 +1122,6 @@ h5 {
   color: rgb(22 163 74 / var(--tw-text-opacity, 1));
 }
 
-.text-primary-dark {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
-}
-
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
@@ -1185,6 +1130,11 @@ h5 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-primary-dark {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -2452,11 +2402,6 @@ h5 {
   .sm\:flex-row {
     flex-direction: row;
   }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -2478,10 +2423,6 @@ h5 {
 @media (min-width: 1024px) {
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
-  }
-
-  .lg\:col-span-6 {
-    grid-column: span 6 / span 6;
   }
 
   .lg\:my-8 {
@@ -2515,11 +2456,6 @@ h5 {
     padding-right: 1rem;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
@@ -2528,11 +2464,6 @@ h5 {
   .lg\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
