@@ -1,0 +1,479 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+@layer base {
+  h1 {
+    @apply text-4xl lg:text-5xl font-bold;
+}
+h2 {
+    @apply text-3xl lg:text-4xl font-bold;
+}
+    h3 {
+        @apply text-2xl lg:text-3xl font-bold;
+    }
+    h4 {
+      @apply text-xl lg:text-2xl font-bold;
+  }
+  
+    h5 {
+        @apply text-base lg:text-lg font-semibold;
+    }
+    .content__header--primary {
+      @apply text-primary-base;
+  }
+  .content__title {
+    @apply font-semibold not-italic text-4xl lg:text-5xl mb-6;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+}
+.content__paragraph,
+.content__highlights-text {
+    @apply font-normal not-italic text-lg text-neutral-subtext;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+}
+
+
+
+    .inter-head {
+        @apply font-semibold not-italic;
+        font-family: "Inter", serif;
+        font-optical-sizing: auto;
+      }
+      .inter-para {
+        @apply font-normal not-italic;
+        font-family: "Inter", serif;
+        font-optical-sizing: auto;
+      }
+      .lora-para {
+        @apply font-normal not-italic;
+        font-family: "Lora", serif;
+        font-optical-sizing: auto;
+      }
+}
+
+
+@layer utilities{
+    
+/* Block: dropdown */
+.section-category { 
+  @apply max-w-7xl mx-auto  lg:px-8 py-6 ; 
+}
+.section-category__container {
+   @apply flex flex-col lg:flex-row relative ; 
+  }
+
+.sidebar-category {
+   @apply w-full px-6 py-3  lg:w-1/4 ; 
+  }
+.sidebar-category--bg {
+   @apply  bg-neutral-footer lg:bg-transparent; 
+  }
+  .dropdown__button {
+    @apply w-full text-left flex justify-between items-center py-2 px-4 rounded-lg border text-primary-dark;
+  }
+
+  .dropdown__button--primary {
+    @apply bg-white border-gray-300;
+  }
+
+  .dropdown__text {
+    @apply flex-1;
+  }
+
+  .dropdown__icon {
+    @apply ml-2;
+  }
+
+/* Dropdown for Mobile */
+.sidebar-category__dropdown {
+   @apply block lg:hidden  relative; 
+  }
+.sidebar-category__title--center {
+   @apply text-center my-5; 
+  }
+  .dropdown__menu {
+    @apply absolute container mt-2 hidden  border  rounded-lg shadow-lg z-50 transition-all duration-300 ease-in-out origin-top transform scale-y-0 max-h-[300px] overflow-y-auto p-3;
+    
+  }
+
+  .dropdown__menu--color {
+    @apply bg-primary-light border-neutral-border;
+  }
+
+  .dropdown__link {
+    @apply  block px-4 py-2 text-gray-700 hover:text-blue-600;
+  }
+
+/* Sidebar List for Larger Screens */
+.sidebar-container {
+  @apply rounded-lg hidden lg:block bg-neutral-footer  py-3 ;
+  }
+.sidebar-container__list {
+   @apply w-full ;
+   }
+.sidebar-container__list-item {
+   @apply block  px-6 py-4 inter-para; 
+  }
+.sidebar-container__list-item--color {
+   @apply  text-primary-dark hover:bg-primary-base ; 
+  }
+
+/* Main Content */
+.main-card {
+   @apply flex-1 px-4; 
+  }
+.main-card__header {
+   @apply flex justify-between items-center mb-4 border-b pb-4 border-neutral-border my-5 ; 
+  }
+.main-card__title--primary { 
+  @apply text-primary-dark inter-head; 
+}
+.main-card__paragraph {
+   @apply text-neutral-subtext text-sm xl:text-base hover:underline; 
+  }
+
+/* Card Grid */
+.card-grid {
+   @apply grid grid-cols-12 gap-6;
+   }
+
+/* Card */
+.card-grid__card {
+   @apply col-span-12 sm:col-span-6 lg:col-span-4 rounded-md shadow-sm overflow-hidden; 
+  }
+.card-grid__image {
+   @apply w-full h-40 object-cover; 
+  }
+.card-grid__content {
+   @apply p-4; 
+  }
+.card-grid__title {
+   @apply mb-2 inter-head; 
+  }
+.card-grid__date {
+   @apply text-sm text-gray-500 inter-para;
+   }
+
+
+
+
+
+/* News */
+.news-section {
+  @apply max-w-7xl mx-auto px-6 lg:px-8 py-6;
+}
+
+.news-section__grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+/* Block: news-card */
+.news-card {
+  @apply bg-transparent p-4;
+}
+
+.news-card__header {
+  @apply text-lg font-bold border-b-2 border-neutral-borderDark pb-2 mb-4;
+}
+
+.news-card__header-icon {
+  @apply pr-3;
+}
+
+.news-card__list {
+  @apply space-y-3;
+}
+
+/* Block: news-card-item */
+.news-card-item--with-image {
+  @apply flex items-start border-b-2 border-neutral-border py-3 space-x-3;
+}
+
+.news-card-item--text-only {
+  @apply border-b-2 border-neutral-border py-1 space-y-2;
+}
+
+.news-card-item__image {
+  @apply w-36 h-20 rounded-md;
+}
+
+.news-card-item__content {
+  @apply text-sm font-medium;
+}
+
+.news-card-item__date {
+  @apply text-xs text-neutral-placeholder;
+}
+
+/* Promo section */
+.promo-section {
+  @apply max-w-7xl mx-auto px-6 lg:px-8 py-10;
+}
+
+.promo-card {
+  @apply bg-neutral-promoBack p-6 lg:rounded-tl-[180px] flex flex-col md:flex-row items-center gap-6  border-4 border-neutral-promoborder ;
+}
+.promo-card__image-container{
+  @apply flex items-end md:w-1/3 py-3 justify-center;
+}
+
+.promo-card__image {
+  @apply w-4/5 h-auto rounded-none  lg:ml-auto;
+}
+
+.promo-card__content {
+  @apply md:w-2/3 md:text-left lg:px-10 ;
+}
+
+.promo-card__title {
+  @apply  mb-3 inter-head text-center lg:text-left ;
+}
+
+.promo-card__description {
+  @apply text-neutral-subtext text-sm mb-6 inter-para text-center lg:text-left ;
+}
+
+.promo-card__button {
+  @apply bg-neutral-promoButton text-center  text-white text-sm font-normal px-6 py-3 rounded-md hover:bg-orange-600 transition inter-para;
+}
+
+/* Latest Articles Section */
+.articles-section {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10;
+}
+
+.articles-section__title {
+  @apply tracking-wide mb-6 inter-head ;
+}
+
+.articles-list {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.article-card {
+  @apply flex  gap-4 border-b border-neutral-border;
+}
+
+.article-card__image {
+  @apply w-28 h-20 rounded-sm object-cover;
+}
+
+.article-card__content {
+  @apply flex-1;
+}
+
+.article-card__title {
+  @apply text-base font-medium leading-tight mb-4 text-primary-dark inter-head;
+}
+
+.article-card__author-date{
+  @apply flex justify-between mt-auto;
+}
+.article-card__author {
+  @apply text-sm text-neutral-subtext mb-1 inter-para;
+}
+
+.article-card__date {
+  @apply text-xs text-neutral-subtext inter-para;
+}
+
+/* Button Group */
+
+
+/*  */
+/* Block container */
+.seo-section {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 py-8 lg:py-10;
+}
+
+/* Inner container with border and shadow */
+.seo-section__container {
+  @apply px-4 sm:px-6 lg:px-16 py-8 lg:py-10 rounded-xl lg:border lg:border-neutral-footer lg:shadow-xl;
+}
+
+/* Button Group wrapper for horizontal scroll */
+.seo-section__button-group-wrapper {
+  @apply overflow-x-auto;
+}
+
+/* Button group container */
+.seo-section__button-group {
+  @apply flex space-x-4 py-3 w-max lg:w-full;
+}
+
+/* Base style for each tab button */
+.seo-section__tab {
+  @apply flex flex-col items-center focus:outline-none w-60 xl:w-1/6 space-y-3 px-3;
+}
+
+/* Base styles for icon, text, and underline */
+.seo-section__tab-icon {
+  @apply text-3xl text-neutral-BigCardBack;
+}
+.seo-section__tab-text {
+  @apply font-normal text-base tracking-wide text-neutral-text;
+}
+.seo-section__tab-underline {
+  @apply w-full h-1 rounded-md bg-neutral-background mt-1;
+}
+
+/* Active state overrides for icon, text, and underline */
+.seo-section__tab-icon-active {
+  @apply text-neutral-BigCardViolet;
+}
+.seo-section__tab-text-active {
+  @apply text-neutral-BigCardViolet;
+}
+.seo-section__tab-underline-active {
+  @apply bg-neutral-BigCardViolet;
+}
+
+
+
+/* Content grid for the section */
+.seo-section__content {
+  @apply mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-10 py-10 lg:mb-0 lg:py-0;
+}
+
+/* Left side content container */
+.seo-section__content-left {
+  @apply mb-8;
+}
+
+/* Main title */
+.seo-section__title {
+  @apply text-primary-dark leading-snug inter-head;
+}
+
+/* Ordered list container */
+.seo-section__list {
+  @apply mt-6 space-y-4 text-neutral-subtext inter-para tracking-wide;
+}
+
+/* List item */
+.seo-section__list-item {
+  @apply flex items-start space-x-2 text-base;
+}
+
+/* Icon in each list item */
+.seo-section__list-icon {
+  @apply text-primary-base;
+}
+
+/* Action button (e.g., Try SEO Toolkit) */
+.seo-section__button {
+  @apply mt-8 px-6 py-3 bg-primary-base text-white font-medium text-lg rounded-md shadow-md hover:bg-primary-hover focus:outline-none;
+}
+
+/* Right side content container */
+.seo-section__content-right {
+  @apply relative flex justify-center items-center mt-10 lg:mt-0;
+}
+
+/* First image container */
+.seo-section__image-container {
+  @apply absolute w-96 h-80 bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+/* Image styling */
+.seo-section__image {
+  @apply w-full h-full object-cover shadow-lg rounded-lg;
+}
+
+/* Second image container with transform */
+.seo-section__image-second-container {
+  @apply relative w-64 h-52 bg-white shadow-lg rounded-lg overflow-hidden transform translate-x-20 translate-y-24;
+}
+
+/* Second image styling */
+.seo-section__image-second {
+  @apply w-full h-full object-cover;
+}
+
+
+/* Block container */
+.updates-section {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+/* Grid container */
+.updates-section__grid {
+  @apply grid grid-cols-12 gap-6;
+}
+
+/* Main Article */
+.updates-section__main {
+  @apply col-span-12 lg:col-span-6 overflow-hidden;
+}
+
+.updates-section__main-image {
+  @apply w-full h-auto;
+}
+
+.updates-section__main-content {
+  @apply p-6;
+}
+
+.updates-section__main-title {
+  @apply text-xl lg:text-2xl font-bold mb-4 text-center inter-para;
+}
+
+.updates-section__author {
+  @apply text-primary-base font-medium mb-4 text-center inter-para;
+}
+
+.updates-section__description {
+  @apply text-primary-dark text-center inter-para;
+}
+
+/* Sidebar */
+.updates-section__sidebar {
+  @apply col-span-12 lg:col-span-6 border-l border-neutral-border px-4;
+}
+
+/* Tabs in Sidebar */
+.updates-section__tabs {
+  @apply flex border-b;
+}
+
+.updates-section__tab-button {
+  @apply flex-1 py-2 text-center font-medium inter-para;
+}
+
+/* Active tab modifier */
+.updates-section__tab-button--active {
+  @apply border-b-2 border-primary-base;
+}
+
+/* Articles List in Sidebar */
+.updates-section__articles-list {
+  @apply p-4;
+}
+
+/* Individual Article in the Sidebar */
+.updates-section__article {
+  @apply mb-6;
+}
+
+.updates-section__article-category {
+  @apply text-primary-base uppercase text-xs md:text-sm inter-para;
+}
+
+.updates-section__article-title {
+  @apply inter-head;
+}
+
+.updates-section__article-meta {
+  @apply text-xs md:text-sm text-neutral-subtext inter-para;
+}
+
+
+
+
+
+}
